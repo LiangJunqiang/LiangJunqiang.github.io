@@ -1266,29 +1266,14 @@ pre .javascript .function {
 .posts-expand .post-meta .post-category-list-link {
   color: #999;
 }
-.post-meta-item-icon {
+.post-meta-item-text {
   display: none;
-  margin-right: 3px;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .post-meta-item-icon {
-    display: inline-block;
-  }
-}
-@media (max-width: 767px) {
-  .post-meta-item-icon {
-    display: inline-block;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .post-meta-item-text {
+/*+tablet() {
     display: none;
   }
-}
-@media (max-width: 767px) {
-  .post-meta-item-text {
+  +mobile() {
     display: none;
-  }
+  }*/
 }
 @media (max-width: 767px) {
   .posts-expand .post-comments-count {
@@ -1535,7 +1520,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #faaf63;
+  background: #ff25ff;
 }
 .links-of-blogroll {
   font-size: 13px;
