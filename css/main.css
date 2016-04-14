@@ -1266,6 +1266,17 @@ pre .javascript .function {
 .posts-expand .post-meta .post-category-list-link {
   color: #999;
 }
+.post-meta-item-icon {
+  display: inline-block;
+/*display: none;
+  margin-right: 3px;
+  +tablet() {
+    display: inline-block;
+  }
+  +mobile() {
+    display: inline-block;
+  }*/
+}
 .post-meta-item-text {
   display: none;
 /*+tablet() {
@@ -1520,7 +1531,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff25ff;
+  background: #ffffe0;
 }
 .links-of-blogroll {
   font-size: 13px;
