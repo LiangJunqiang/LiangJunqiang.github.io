@@ -1268,6 +1268,7 @@ pre .javascript .function {
 }
 .post-meta-item-icon {
   display: inline-block;
+  margin-right: 3px;
 /*display: none;
   margin-right: 3px;
   +tablet() {
@@ -1531,7 +1532,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9ff;
+  background: #20ff95;
 }
 .links-of-blogroll {
   font-size: 13px;
