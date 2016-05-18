@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="LiangJun's Notes">
 <meta property="og:description" content="昨天看到一道编程题数的划分，想想其实就是典型的放球问题的一个子问题，于是便把其它的子问题也试着去理解、整理。">
 <meta property="og:image" content="http://7xssq8.com1.z0.glb.clouddn.com/%E5%88%86%E7%BB%84%E6%95%B0.png">
-<meta property="og:updated_time" content="2016-05-18T11:14:17.573Z">
+<meta property="og:updated_time" content="2016-05-18T11:16:22.237Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="放球问题（球盒模型）">
 <meta name="twitter:description" content="昨天看到一道编程题数的划分，想想其实就是典型的放球问题的一个子问题，于是便把其它的子问题也试着去理解、整理。">
@@ -286,9 +286,6 @@
       
         <p>昨天看到一道编程题<strong><a href="http://liangjunqiang.top/2016/05/18/%E6%95%B0%E7%9A%84%E5%88%92%E5%88%86/" target="_blank" rel="external">数的划分</a></strong>，想想其实就是典型的放球问题的一个子问题，于是便把其它的子问题也试着去理解、整理。</p>
 <a id="more"></a>
-<blockquote>
-<p>将整数n分成k份，且每份不能为空，任意两份不能相同(不考虑顺序)。<br>　　例如：n=7，k=3，下面三种分法被认为是相同的。<br>　　$1，1，5; 1，5，1; 5，1，1;$<br>　　问有多少种不同的分法。<br>输入格式<br>　　n，k<br>输出格式<br>　　一个整数，即不同的分法<br>样例输入<br>7 3<br>样例输出<br>4 {四种分法为：$1，1，5; 1，2，4; 1，3，3; 2，2，3;$}<br>数据规模和约定<br>　　$6&lt;n&lt;=200，2&lt;=k&lt;=6$</p>
-</blockquote>
 <p>放球问题根据球是否有区别，盒子是否有区别，是否允许存在空盒子分成八个子问题：</p>
 <table>
 <thead>
@@ -359,17 +356,17 @@
 </tr>
 </tbody>
 </table>
-<h2 id="子问题一-球和盒子均有区别且允许有空盒"><a href="#子问题一-球和盒子均有区别且允许有空盒" class="headerlink" title="子问题一 球和盒子均有区别且允许有空盒"></a>子问题一 球和盒子均有区别且允许有空盒</h2><p>把球放进去盒子时，对于每个球而言都是独立选择，且每个球有m种选择，这就是中学时讲的分步计算，总的情况数是$m^n$（显然n与m的大小关系不影响结果计算，以下若无特别说明，则结果与n、m的大小关系无关）。</p>
-<h2 id="子问题二-球和盒子均有区别且无空盒"><a href="#子问题二-球和盒子均有区别且无空盒" class="headerlink" title="子问题二 球和盒子均有区别且无空盒"></a>子问题二 球和盒子均有区别且无空盒</h2><p>若$n<m$，则放法为0。以下讨论$n>m$的情况。</m$，则放法为0。以下讨论$n></p>
+<h1 id="子问题一-球和盒子均有区别且允许有空盒"><a href="#子问题一-球和盒子均有区别且允许有空盒" class="headerlink" title="子问题一 球和盒子均有区别且允许有空盒"></a>子问题一 球和盒子均有区别且允许有空盒</h1><p>把球放进去盒子时，对于每个球而言都是独立选择，且每个球有m种选择，这就是中学时讲的分步计算，总的情况数是$m^n$（显然n与m的大小关系不影响结果计算，以下若无特别说明，则结果与n、m的大小关系无关）。</p>
+<h1 id="子问题二-球和盒子均有区别且无空盒"><a href="#子问题二-球和盒子均有区别且无空盒" class="headerlink" title="子问题二 球和盒子均有区别且无空盒"></a>子问题二 球和盒子均有区别且无空盒</h1><p>若$n<m$，则放法为0。以下讨论$n>m$的情况。</m$，则放法为0。以下讨论$n></p>
 <p>若不考虑盒子区别时得$S(n,m)$ , 然后m个盒子进行排列得$m!$<br>故总的放法为$$m!S(n,m)$$</p>
 <blockquote>
 <p>$S(n,m)为第二类Stirling数$详见<a href="https://zh.wikipedia.org/wiki/%E6%96%AF%E7%89%B9%E7%81%B5%E6%95%B0" target="_blank" rel="external">维基百科</a>或<a href="http://baike.baidu.com/link?url=vCyMftJbJAgz89SnxvUuUvzNzCC2oU-nfFm8YCBsTCBOd9fHRS3tVppTQkgM1tG5dwvmcfatgcnb-UDHEZYvAa#1" target="_blank" rel="external">百度百科</a></p>
 </blockquote>
-<h2 id="子问题三-球有区别盒子无区别且无空盒"><a href="#子问题三-球有区别盒子无区别且无空盒" class="headerlink" title="子问题三 球有区别盒子无区别且无空盒"></a>子问题三 球有区别盒子无区别且无空盒</h2><p>若$n<m$，则放法为0。以下讨论$n>m$的情况。<br>这种情况就是第二类Stirling数，放法数为$S(n,m)$。<br>笔者暂时不知道更好的解法，如果有请留言分享哈！</m$，则放法为0。以下讨论$n></p>
-<h2 id="子问题四-球有区别盒子无区别且允许有空盒"><a href="#子问题四-球有区别盒子无区别且允许有空盒" class="headerlink" title="子问题四 球有区别盒子无区别且允许有空盒"></a>子问题四 球有区别盒子无区别且允许有空盒</h2><p>与子问题三的区别是，包括有空盒的情况。由于盒子无区别，故分解问题时只需把各个空盒数的情况下的方案数相加即可。当仅含k个空盒时，可把情况看作n个不同的球放进k个盒子里且无空盒，也就是转化为子问题三了。故总方案数为各子方案数相加<br>$$S (n, 1) + S (n, 2) + …+ S (n,m )$$</p>
-<h2 id="子问题五-球无区别盒子有区别且允许有空盒"><a href="#子问题五-球无区别盒子有区别且允许有空盒" class="headerlink" title="子问题五 球无区别盒子有区别且允许有空盒"></a>子问题五 球无区别盒子有区别且允许有空盒</h2><p>根据隔板原理：将n个球排成一列，中间插入m-1个隔板，分成m个堆，其中允许隔板相邻，也可以放在两边。<br>插入第1个隔板前，有n+1个空；插入一个板后，有n+2个空….故一共有(n+1)<em>(n+2)….</em>(n+m-1)种。<br>但板子的插入顺序是没有要求的，所以我们要去除重复的情形。板子的顺序有(m-1)!<br>综上，有$(n+1)<em>(n+2)….</em>(n+m-1)/(m-1)! = C_{n+m-1}^{n}$种情形。</p>
-<h2 id="子问题六-球无区别盒子有区别且无空盒"><a href="#子问题六-球无区别盒子有区别且无空盒" class="headerlink" title="子问题六 球无区别盒子有区别且无空盒"></a>子问题六 球无区别盒子有区别且无空盒</h2><p>同样使用隔板原理，（对照子问题五）但是不允许有空盒，所以球列两边不能放隔板，而且隔板间至少有一个球。也就是在n-1个空位中选择m-1个，放置隔板。放法数为$C_{n-1}^{m-1}$</p>
-<h2 id="子问题七、八-球和盒子均无区别"><a href="#子问题七、八-球和盒子均无区别" class="headerlink" title="子问题七、八 球和盒子均无区别"></a>子问题七、八 球和盒子均无区别</h2><h3 id="分组数"><a href="#分组数" class="headerlink" title="分组数"></a>分组数</h3><p>最后两个子问题需要引入与第二类斯特林(Stirling) 数 $S (n,m)$ 类似的分组数$M(n,r)$来简化。</p>
+<h1 id="子问题三-球有区别盒子无区别且无空盒"><a href="#子问题三-球有区别盒子无区别且无空盒" class="headerlink" title="子问题三 球有区别盒子无区别且无空盒"></a>子问题三 球有区别盒子无区别且无空盒</h1><p>若$n<m$，则放法为0。以下讨论$n>m$的情况。<br>这种情况就是第二类Stirling数，放法数为$S(n,m)$。<br>笔者暂时不知道更好的解法，如果有请留言分享哈！</m$，则放法为0。以下讨论$n></p>
+<h1 id="子问题四-球有区别盒子无区别且允许有空盒"><a href="#子问题四-球有区别盒子无区别且允许有空盒" class="headerlink" title="子问题四 球有区别盒子无区别且允许有空盒"></a>子问题四 球有区别盒子无区别且允许有空盒</h1><p>与子问题三的区别是，包括有空盒的情况。由于盒子无区别，故分解问题时只需把各个空盒数的情况下的方案数相加即可。当仅含k个空盒时，可把情况看作n个不同的球放进k个盒子里且无空盒，也就是转化为子问题三了。故总方案数为各子方案数相加<br>$$S (n, 1) + S (n, 2) + …+ S (n,m )$$</p>
+<h1 id="子问题五-球无区别盒子有区别且允许有空盒"><a href="#子问题五-球无区别盒子有区别且允许有空盒" class="headerlink" title="子问题五 球无区别盒子有区别且允许有空盒"></a>子问题五 球无区别盒子有区别且允许有空盒</h1><p>根据隔板原理：将n个球排成一列，中间插入m-1个隔板，分成m个堆，其中允许隔板相邻，也可以放在两边。<br>插入第1个隔板前，有n+1个空；插入一个板后，有n+2个空….故一共有(n+1)<em>(n+2)….</em>(n+m-1)种。<br>但板子的插入顺序是没有要求的，所以我们要去除重复的情形。板子的顺序有(m-1)!<br>综上，有$(n+1)<em>(n+2)….</em>(n+m-1)/(m-1)! = C_{n+m-1}^{n}$种情形。</p>
+<h1 id="子问题六-球无区别盒子有区别且无空盒"><a href="#子问题六-球无区别盒子有区别且无空盒" class="headerlink" title="子问题六 球无区别盒子有区别且无空盒"></a>子问题六 球无区别盒子有区别且无空盒</h1><p>同样使用隔板原理，（对照子问题五）但是不允许有空盒，所以球列两边不能放隔板，而且隔板间至少有一个球。也就是在n-1个空位中选择m-1个，放置隔板。放法数为$C_{n-1}^{m-1}$</p>
+<h1 id="子问题七、八-球和盒子均无区别"><a href="#子问题七、八-球和盒子均无区别" class="headerlink" title="子问题七、八 球和盒子均无区别"></a>子问题七、八 球和盒子均无区别</h1><h2 id="分组数"><a href="#分组数" class="headerlink" title="分组数"></a>分组数</h2><p>最后两个子问题需要引入与第二类斯特林(Stirling) 数 $S (n,m)$ 类似的分组数$M(n,r)$来简化。</p>
 <p><em>以下公式的具体证明详见<a href="http://166.111.121.20:9080/mathjournal/XUSJ200202/xusj200202010.caj.pdf" target="_blank" rel="external">参考文献 Ⅰ</a></em></p>
 <p><strong>定义</strong>  将 n 个相同元素分成 r (r≤n)个无序组(每组中至少有一个元素) , 称作相同元素的分组问题, 简称分组问题。所有不同的分法方案总数称作分法种数, 记作$M (n, r)$ , 又称分组数$M (n,r)$。</p>
 <p><strong>引理 1</strong><br>(a)$M(n, 1) = 1$;　　      　　          (b)$M(n, n) = 1$;   　<br>(c)$M(n+1, n) = 1$; 　　    (d)$M(n, n+ k ) = 0$;<br>(e)$M(n, 2) = [n/2] (n, k∈N, [x]为取整函数)$。</p>
@@ -609,7 +606,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#子问题一-球和盒子均有区别且允许有空盒"><span class="nav-number">1.</span> <span class="nav-text">子问题一 球和盒子均有区别且允许有空盒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子问题二-球和盒子均有区别且无空盒"><span class="nav-number">2.</span> <span class="nav-text">子问题二 球和盒子均有区别且无空盒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子问题三-球有区别盒子无区别且无空盒"><span class="nav-number">3.</span> <span class="nav-text">子问题三 球有区别盒子无区别且无空盒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子问题四-球有区别盒子无区别且允许有空盒"><span class="nav-number">4.</span> <span class="nav-text">子问题四 球有区别盒子无区别且允许有空盒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子问题五-球无区别盒子有区别且允许有空盒"><span class="nav-number">5.</span> <span class="nav-text">子问题五 球无区别盒子有区别且允许有空盒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子问题六-球无区别盒子有区别且无空盒"><span class="nav-number">6.</span> <span class="nav-text">子问题六 球无区别盒子有区别且无空盒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子问题七、八-球和盒子均无区别"><span class="nav-number">7.</span> <span class="nav-text">子问题七、八 球和盒子均无区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分组数"><span class="nav-number">7.1.</span> <span class="nav-text">分组数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相关C代码"><span class="nav-number"></span> <span class="nav-text">相关C代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number"></span> <span class="nav-text">参考文献</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#子问题一-球和盒子均有区别且允许有空盒"><span class="nav-number">1.</span> <span class="nav-text">子问题一 球和盒子均有区别且允许有空盒</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#子问题二-球和盒子均有区别且无空盒"><span class="nav-number">2.</span> <span class="nav-text">子问题二 球和盒子均有区别且无空盒</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#子问题三-球有区别盒子无区别且无空盒"><span class="nav-number">3.</span> <span class="nav-text">子问题三 球有区别盒子无区别且无空盒</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#子问题四-球有区别盒子无区别且允许有空盒"><span class="nav-number">4.</span> <span class="nav-text">子问题四 球有区别盒子无区别且允许有空盒</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#子问题五-球无区别盒子有区别且允许有空盒"><span class="nav-number">5.</span> <span class="nav-text">子问题五 球无区别盒子有区别且允许有空盒</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#子问题六-球无区别盒子有区别且无空盒"><span class="nav-number">6.</span> <span class="nav-text">子问题六 球无区别盒子有区别且无空盒</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#子问题七、八-球和盒子均无区别"><span class="nav-number">7.</span> <span class="nav-text">子问题七、八 球和盒子均无区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分组数"><span class="nav-number">7.1.</span> <span class="nav-text">分组数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相关C代码"><span class="nav-number">8.</span> <span class="nav-text">相关C代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">9.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
           </div>
         </section>
