@@ -65,7 +65,7 @@
 <meta property="og:image" content="http://www.forkosh.com/mathtex.cgi? \sum\limits_{i=1}^m M (n, i) = M (n + m, m), (n > m)">
 <meta property="og:image" content="http://www.forkosh.com/mathtex.cgi? \sum\limits_{i=1}^n M(n, i) = M(2n, n), (n \leq m)">
 <meta property="og:image" content="http://7xssq8.com1.z0.glb.clouddn.com/%E5%88%86%E7%BB%84%E6%95%B0.png">
-<meta property="og:updated_time" content="2016-05-18T12:15:55.945Z">
+<meta property="og:updated_time" content="2016-05-18T12:20:09.926Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="放球问题（球盒模型）">
 <meta name="twitter:description" content="昨天看到一道编程题数的划分，想想其实就是典型的放球问题的一个子问题，于是便把其它的子问题也试着去理解、整理。">
@@ -359,7 +359,7 @@
 </tbody>
 </table>
 <h1 id="子问题一-球和盒子均有区别且允许有空盒"><a href="#子问题一-球和盒子均有区别且允许有空盒" class="headerlink" title="子问题一 球和盒子均有区别且允许有空盒"></a>子问题一 球和盒子均有区别且允许有空盒</h1><p>把球放进去盒子时，对于每个球而言都是独立选择，且每个球有m种选择，这就是中学时讲的分步计算，总的情况数是$m^n$（显然n与m的大小关系不影响结果计算，以下若无特别说明，则结果与n、m的大小关系无关）。</p>
-<h1 id="子问题二-球和盒子均有区别且无空盒"><a href="#子问题二-球和盒子均有区别且无空盒" class="headerlink" title="子问题二 球和盒子均有区别且无空盒"></a>子问题二 球和盒子均有区别且无空盒</h1><p>若$n<m$，则放法为0。以下讨论$n>m$的情况。</m$，则放法为0。以下讨论$n></p>
+<h1 id="子问题二-球和盒子均有区别且无空盒"><a href="#子问题二-球和盒子均有区别且无空盒" class="headerlink" title="子问题二 球和盒子均有区别且无空盒"></a>子问题二 球和盒子均有区别且无空盒</h1><p>若$n &lt; m$，则放法为0。以下讨论$n &gt; m$的情况。</p>
 <p>若不考虑盒子区别时得$S(n,m)$ , 然后m个盒子进行排列得$m!$<br>故总的放法为$$m!S(n,m)$$</p>
 <blockquote>
 <p>$S(n,m)为第二类Stirling数$详见<a href="https://zh.wikipedia.org/wiki/%E6%96%AF%E7%89%B9%E7%81%B5%E6%95%B0" target="_blank" rel="external">维基百科</a>或<a href="http://baike.baidu.com/link?url=vCyMftJbJAgz89SnxvUuUvzNzCC2oU-nfFm8YCBsTCBOd9fHRS3tVppTQkgM1tG5dwvmcfatgcnb-UDHEZYvAa#1" target="_blank" rel="external">百度百科</a></p>
