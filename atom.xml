@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-05-18T11:53:23.926Z</updated>
+  <updated>2016-05-18T11:56:34.533Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/05/18/%E6%94%BE%E7%90%83%E9%97%AE%E9%A2%98%EF%BC%88%E7%90%83%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%89/"/>
     <id>http://yoursite.com/2016/05/18/放球问题（球盒模型）/</id>
     <published>2016-05-18T10:00:00.000Z</published>
-    <updated>2016-05-18T11:53:23.926Z</updated>
+    <updated>2016-05-18T11:56:34.533Z</updated>
     
     <content type="html">&lt;p&gt;昨天看到一道编程题&lt;strong&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/05/18/%E6%95%B0%E7%9A%84%E5%88%92%E5%88%86/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;数的划分&lt;/a&gt;&lt;/strong&gt;，想想其实就是典型的放球问题的一个子问题，于是便把其它的子问题也试着去理解、整理。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -102,7 +102,7 @@
 &lt;/blockquote&gt;
 &lt;h1 id=&quot;子问题三-球有区别盒子无区别且无空盒&quot;&gt;&lt;a href=&quot;#子问题三-球有区别盒子无区别且无空盒&quot; class=&quot;headerlink&quot; title=&quot;子问题三 球有区别盒子无区别且无空盒&quot;&gt;&lt;/a&gt;子问题三 球有区别盒子无区别且无空盒&lt;/h1&gt;&lt;p&gt;若$n&lt;m$，则放法为0。以下讨论$n&gt;m$的情况。&lt;br&gt;这种情况就是第二类Stirling数，放法数为$S(n,m)$。&lt;br&gt;笔者暂时不知道更好的解法，如果有请留言分享哈！&lt;/m$，则放法为0。以下讨论$n&gt;&lt;/p&gt;
 &lt;h1 id=&quot;子问题四-球有区别盒子无区别且允许有空盒&quot;&gt;&lt;a href=&quot;#子问题四-球有区别盒子无区别且允许有空盒&quot; class=&quot;headerlink&quot; title=&quot;子问题四 球有区别盒子无区别且允许有空盒&quot;&gt;&lt;/a&gt;子问题四 球有区别盒子无区别且允许有空盒&lt;/h1&gt;&lt;p&gt;与子问题三的区别是，包括有空盒的情况。由于盒子无区别，故分解问题时只需把各个空盒数的情况下的方案数相加即可。当仅含k个空盒时，可把情况看作n个不同的球放进k个盒子里且无空盒，也就是转化为子问题三了。故总方案数为各子方案数相加&lt;br&gt;$$S (n, 1) + S (n, 2) + …+ S (n,m )$$&lt;/p&gt;
-&lt;h1 id=&quot;子问题五-球无区别盒子有区别且允许有空盒&quot;&gt;&lt;a href=&quot;#子问题五-球无区别盒子有区别且允许有空盒&quot; class=&quot;headerlink&quot; title=&quot;子问题五 球无区别盒子有区别且允许有空盒&quot;&gt;&lt;/a&gt;子问题五 球无区别盒子有区别且允许有空盒&lt;/h1&gt;&lt;p&gt;根据隔板原理：将n个球排成一列，中间插入m-1个隔板，分成m个堆，其中允许隔板相邻，也可以放在两边。&lt;br&gt;插入第1个隔板前，有n+1个空；插入一个板后，有n+2个空….故一共有(n+1)&lt;em&gt;(n+2)….&lt;/em&gt;(n+m-1)种。&lt;br&gt;但板子的插入顺序是没有要求的，所以我们要去除重复的情形。板子的顺序有(m-1)!&lt;br&gt;综上，有$(n+1)&lt;em&gt;(n+2)….&lt;/em&gt;(n+m-1)/(m-1)! = C_{n+m-1}^{n}$种情形。&lt;/p&gt;
+&lt;h1 id=&quot;子问题五-球无区别盒子有区别且允许有空盒&quot;&gt;&lt;a href=&quot;#子问题五-球无区别盒子有区别且允许有空盒&quot; class=&quot;headerlink&quot; title=&quot;子问题五 球无区别盒子有区别且允许有空盒&quot;&gt;&lt;/a&gt;子问题五 球无区别盒子有区别且允许有空盒&lt;/h1&gt;&lt;p&gt;根据隔板原理：将n个球排成一列，中间插入m-1个隔板，分成m个堆，其中允许隔板相邻，也可以放在两边。&lt;br&gt;插入第1个隔板前，有n+1个空；插入一个板后，有n+2个空….故一共有$(n+1)&lt;em&gt;(n+2)….&lt;/em&gt;(n+m-1)$种。&lt;br&gt;但板子的插入顺序是没有要求的，所以我们要去除重复的情形。板子的顺序有$(m-1)!$&lt;br&gt;综上，有$(n+1)&lt;em&gt;(n+2)&lt;/em&gt;…*(n+m-1)/(m-1)! = C_{n+m-1}^{n}$种情形。&lt;/p&gt;
 &lt;h1 id=&quot;子问题六-球无区别盒子有区别且无空盒&quot;&gt;&lt;a href=&quot;#子问题六-球无区别盒子有区别且无空盒&quot; class=&quot;headerlink&quot; title=&quot;子问题六 球无区别盒子有区别且无空盒&quot;&gt;&lt;/a&gt;子问题六 球无区别盒子有区别且无空盒&lt;/h1&gt;&lt;p&gt;同样使用隔板原理，（对照子问题五）但是不允许有空盒，所以球列两边不能放隔板，而且隔板间至少有一个球。也就是在n-1个空位中选择m-1个，放置隔板。放法数为$C_{n-1}^{m-1}$&lt;/p&gt;
 &lt;h1 id=&quot;子问题七、八-球和盒子均无区别&quot;&gt;&lt;a href=&quot;#子问题七、八-球和盒子均无区别&quot; class=&quot;headerlink&quot; title=&quot;子问题七、八 球和盒子均无区别&quot;&gt;&lt;/a&gt;子问题七、八 球和盒子均无区别&lt;/h1&gt;&lt;h2 id=&quot;分组数&quot;&gt;&lt;a href=&quot;#分组数&quot; class=&quot;headerlink&quot; title=&quot;分组数&quot;&gt;&lt;/a&gt;分组数&lt;/h2&gt;&lt;p&gt;最后两个子问题需要引入与第二类斯特林(Stirling) 数 $S (n,m)$ 类似的分组数$M(n,r)$来简化。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;以下公式的具体证明详见&lt;a href=&quot;http://166.111.121.20:9080/mathjournal/XUSJ200202/xusj200202010.caj.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考文献 Ⅰ&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;

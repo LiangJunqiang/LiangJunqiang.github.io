@@ -67,7 +67,7 @@
 <meta property="og:image" content="http://www.forkosh.com/mathtex.cgi? \sum\limits_{i=1}^r M (n, i) = M (n + r, r), (n > r)">
 <meta property="og:image" content="http://www.forkosh.com/mathtex.cgi? \sum\limits_{i=1}^n M(n, i) = M(2n, n), (n <= r)">
 <meta property="og:image" content="http://7xssq8.com1.z0.glb.clouddn.com/%E5%88%86%E7%BB%84%E6%95%B0.png">
-<meta property="og:updated_time" content="2016-05-18T11:53:23.926Z">
+<meta property="og:updated_time" content="2016-05-18T11:56:34.533Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="放球问题（球盒模型）">
 <meta name="twitter:description" content="昨天看到一道编程题数的划分，想想其实就是典型的放球问题的一个子问题，于是便把其它的子问题也试着去理解、整理。">
@@ -368,7 +368,7 @@
 </blockquote>
 <h1 id="子问题三-球有区别盒子无区别且无空盒"><a href="#子问题三-球有区别盒子无区别且无空盒" class="headerlink" title="子问题三 球有区别盒子无区别且无空盒"></a>子问题三 球有区别盒子无区别且无空盒</h1><p>若$n<m$，则放法为0。以下讨论$n>m$的情况。<br>这种情况就是第二类Stirling数，放法数为$S(n,m)$。<br>笔者暂时不知道更好的解法，如果有请留言分享哈！</m$，则放法为0。以下讨论$n></p>
 <h1 id="子问题四-球有区别盒子无区别且允许有空盒"><a href="#子问题四-球有区别盒子无区别且允许有空盒" class="headerlink" title="子问题四 球有区别盒子无区别且允许有空盒"></a>子问题四 球有区别盒子无区别且允许有空盒</h1><p>与子问题三的区别是，包括有空盒的情况。由于盒子无区别，故分解问题时只需把各个空盒数的情况下的方案数相加即可。当仅含k个空盒时，可把情况看作n个不同的球放进k个盒子里且无空盒，也就是转化为子问题三了。故总方案数为各子方案数相加<br>$$S (n, 1) + S (n, 2) + …+ S (n,m )$$</p>
-<h1 id="子问题五-球无区别盒子有区别且允许有空盒"><a href="#子问题五-球无区别盒子有区别且允许有空盒" class="headerlink" title="子问题五 球无区别盒子有区别且允许有空盒"></a>子问题五 球无区别盒子有区别且允许有空盒</h1><p>根据隔板原理：将n个球排成一列，中间插入m-1个隔板，分成m个堆，其中允许隔板相邻，也可以放在两边。<br>插入第1个隔板前，有n+1个空；插入一个板后，有n+2个空….故一共有(n+1)<em>(n+2)….</em>(n+m-1)种。<br>但板子的插入顺序是没有要求的，所以我们要去除重复的情形。板子的顺序有(m-1)!<br>综上，有$(n+1)<em>(n+2)….</em>(n+m-1)/(m-1)! = C_{n+m-1}^{n}$种情形。</p>
+<h1 id="子问题五-球无区别盒子有区别且允许有空盒"><a href="#子问题五-球无区别盒子有区别且允许有空盒" class="headerlink" title="子问题五 球无区别盒子有区别且允许有空盒"></a>子问题五 球无区别盒子有区别且允许有空盒</h1><p>根据隔板原理：将n个球排成一列，中间插入m-1个隔板，分成m个堆，其中允许隔板相邻，也可以放在两边。<br>插入第1个隔板前，有n+1个空；插入一个板后，有n+2个空….故一共有$(n+1)<em>(n+2)….</em>(n+m-1)$种。<br>但板子的插入顺序是没有要求的，所以我们要去除重复的情形。板子的顺序有$(m-1)!$<br>综上，有$(n+1)<em>(n+2)</em>…*(n+m-1)/(m-1)! = C_{n+m-1}^{n}$种情形。</p>
 <h1 id="子问题六-球无区别盒子有区别且无空盒"><a href="#子问题六-球无区别盒子有区别且无空盒" class="headerlink" title="子问题六 球无区别盒子有区别且无空盒"></a>子问题六 球无区别盒子有区别且无空盒</h1><p>同样使用隔板原理，（对照子问题五）但是不允许有空盒，所以球列两边不能放隔板，而且隔板间至少有一个球。也就是在n-1个空位中选择m-1个，放置隔板。放法数为$C_{n-1}^{m-1}$</p>
 <h1 id="子问题七、八-球和盒子均无区别"><a href="#子问题七、八-球和盒子均无区别" class="headerlink" title="子问题七、八 球和盒子均无区别"></a>子问题七、八 球和盒子均无区别</h1><h2 id="分组数"><a href="#分组数" class="headerlink" title="分组数"></a>分组数</h2><p>最后两个子问题需要引入与第二类斯特林(Stirling) 数 $S (n,m)$ 类似的分组数$M(n,r)$来简化。</p>
 <p><em>以下公式的具体证明详见<a href="http://166.111.121.20:9080/mathjournal/XUSJ200202/xusj200202010.caj.pdf" target="_blank" rel="external">参考文献 Ⅰ</a></em></p>
