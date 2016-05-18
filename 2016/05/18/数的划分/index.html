@@ -56,18 +56,16 @@
 
 
 
-<meta name="description" content="昨天看到一道编程题数的划分（题目描述如下），想想其实就是典型的放球问题的一个子问题，于是便把其它的子问题也试着去理解、整理。">
+<meta name="description" content="典型的放球问题的一个子问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数的划分">
 <meta property="og:url" content="http://yoursite.com/2016/05/18/数的划分/index.html">
 <meta property="og:site_name" content="LiangJun's Notes">
-<meta property="og:description" content="昨天看到一道编程题数的划分（题目描述如下），想想其实就是典型的放球问题的一个子问题，于是便把其它的子问题也试着去理解、整理。">
-<meta property="og:image" content="http://7xssq8.com1.z0.glb.clouddn.com/%E5%88%86%E7%BB%84%E6%95%B0.png">
-<meta property="og:updated_time" content="2016-05-18T10:06:26.479Z">
+<meta property="og:description" content="典型的放球问题的一个子问题">
+<meta property="og:updated_time" content="2016-05-18T10:13:56.971Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数的划分">
-<meta name="twitter:description" content="昨天看到一道编程题数的划分（题目描述如下），想想其实就是典型的放球问题的一个子问题，于是便把其它的子问题也试着去理解、整理。">
-<meta name="twitter:image" content="http://7xssq8.com1.z0.glb.clouddn.com/%E5%88%86%E7%BB%84%E6%95%B0.png">
+<meta name="twitter:description" content="典型的放球问题的一个子问题">
 
 
 
@@ -284,98 +282,12 @@
       
 
       
-        <p>昨天看到一道编程题<strong>数的划分</strong>（题目描述如下），想想其实就是典型的放球问题的一个子问题，于是便把其它的子问题也试着去理解、整理。<br><a id="more"></a></p>
-<blockquote>
+        <p>典型的放球问题的一个子问题<br><a id="more"></a></p>
+<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><blockquote>
 <p>将整数n分成k份，且每份不能为空，任意两份不能相同(不考虑顺序)。<br>　　例如：n=7，k=3，下面三种分法被认为是相同的。<br>　　$1，1，5; 1，5，1; 5，1，1;$<br>　　问有多少种不同的分法。<br>输入格式<br>　　n，k<br>输出格式<br>　　一个整数，即不同的分法<br>样例输入<br>7 3<br>样例输出<br>4 {四种分法为：$1，1，5; 1，2，4; 1，3，3; 2，2，3;$}<br>数据规模和约定<br>　　$6&lt;n&lt;=200，2&lt;=k&lt;=6$</p>
 </blockquote>
-<p>放球问题根据球是否有区别，盒子是否有区别，是否允许存在空盒子分成八个子问题：</p>
-<table>
-<thead>
-<tr>
-<th>子问题</th>
-<th>n个球</th>
-<th>m个盒子</th>
-<th>可否有空盒</th>
-<th>方案数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>有区别</td>
-<td>有区别</td>
-<td>可以</td>
-<td>$m^n$</td>
-</tr>
-<tr>
-<td>2</td>
-<td>有区别</td>
-<td>有区别</td>
-<td>无空盒</td>
-<td>$m!S(n,m)$</td>
-</tr>
-<tr>
-<td>3</td>
-<td>有区别</td>
-<td>无区别</td>
-<td>无空盒</td>
-<td>$S(n,m)$</td>
-</tr>
-<tr>
-<td>4</td>
-<td>有区别</td>
-<td>无区别</td>
-<td>可以</td>
-<td>$S (n, 1) + S (n, 2) + …+ S (n,m )$</td>
-</tr>
-<tr>
-<td>5</td>
-<td>无区别</td>
-<td>有区别</td>
-<td>可以</td>
-<td>$C_{n+m-1}^{n}$</td>
-</tr>
-<tr>
-<td>6</td>
-<td>无区别</td>
-<td>有区别</td>
-<td>无空盒</td>
-<td>$C_{n-1}^{m-1}$</td>
-</tr>
-<tr>
-<td>7</td>
-<td>无区别</td>
-<td>无区别</td>
-<td>可以</td>
-<td>$\sum\limits_{i=1}^m</td>
-</tr>
-</tbody>
-</table>
-<p>M (n, i) = M (n + m, m) (n &gt; m)$或$\sum\limits_{i=1}^n M (n, i) = M (2n, n) (n ≤ m)$|<br>|8|无区别|无区别|无空盒|分组数$M(2n, n)$|</p>
-<h2 id="子问题一-球和盒子均有区别且允许有空盒"><a href="#子问题一-球和盒子均有区别且允许有空盒" class="headerlink" title="子问题一 球和盒子均有区别且允许有空盒"></a>子问题一 球和盒子均有区别且允许有空盒</h2><p>把球放进去盒子时，对于每个球而言都是独立选择，且每个球有m种选择，这就是中学时讲的分步计算，总的情况数是$m^n$（显然n与m的大小关系不影响结果计算，以下若无特别说明，则结果与n、m的大小关系无关）。</p>
-<h2 id="子问题二-球和盒子均有区别且无空盒"><a href="#子问题二-球和盒子均有区别且无空盒" class="headerlink" title="子问题二 球和盒子均有区别且无空盒"></a>子问题二 球和盒子均有区别且无空盒</h2><p>若$n<m$，则放法为0。以下讨论$n>m$的情况。</m$，则放法为0。以下讨论$n></p>
-<p>若不考虑盒子区别时得$S(n,m)$ , 然后m个盒子进行排列得$m!$<br>故总的放法为$$m!S(n,m)$$</p>
-<blockquote>
-<p>$S(n,m)为第二类Stirling数$详见<a href="https://zh.wikipedia.org/wiki/%E6%96%AF%E7%89%B9%E7%81%B5%E6%95%B0" target="_blank" rel="external">维基百科</a>或<a href="http://baike.baidu.com/link?url=vCyMftJbJAgz89SnxvUuUvzNzCC2oU-nfFm8YCBsTCBOd9fHRS3tVppTQkgM1tG5dwvmcfatgcnb-UDHEZYvAa#1" target="_blank" rel="external">百度百科</a></p>
-</blockquote>
-<h2 id="子问题三-球有区别盒子无区别且无空盒"><a href="#子问题三-球有区别盒子无区别且无空盒" class="headerlink" title="子问题三 球有区别盒子无区别且无空盒"></a>子问题三 球有区别盒子无区别且无空盒</h2><p>若$n<m$，则放法为0。以下讨论$n>m$的情况。<br>这种情况就是第二类Stirling数，放法数为$S(n,m)$。<br>笔者暂时不知道更好的解法，如果有请留言分享哈！</m$，则放法为0。以下讨论$n></p>
-<h2 id="子问题四-球有区别盒子无区别且允许有空盒"><a href="#子问题四-球有区别盒子无区别且允许有空盒" class="headerlink" title="子问题四 球有区别盒子无区别且允许有空盒"></a>子问题四 球有区别盒子无区别且允许有空盒</h2><p>与子问题三的区别是，包括有空盒的情况。由于盒子无区别，故分解问题时只需把各个空盒数的情况下的方案数相加即可。当仅含k个空盒时，可把情况看作n个不同的球放进k个盒子里且无空盒，也就是转化为子问题三了。故总方案数为各子方案数相加<br>$$S (n, 1) + S (n, 2) + …+ S (n,m )$$</p>
-<h2 id="子问题五-球无区别盒子有区别且允许有空盒"><a href="#子问题五-球无区别盒子有区别且允许有空盒" class="headerlink" title="子问题五 球无区别盒子有区别且允许有空盒"></a>子问题五 球无区别盒子有区别且允许有空盒</h2><p>根据隔板原理：将n个球排成一列，中间插入m-1个隔板，分成m个堆，其中允许隔板相邻，也可以放在两边。<br>插入第1个隔板前，有n+1个空；插入一个板后，有n+2个空….故一共有(n+1)<em>(n+2)….</em>(n+m-1)种。<br>但板子的插入顺序是没有要求的，所以我们要去除重复的情形。板子的顺序有(m-1)!<br>综上，有$(n+1)<em>(n+2)….</em>(n+m-1)/(m-1)! = C_{n+m-1}^{n}$种情形。</p>
-<h2 id="子问题六-球无区别盒子有区别且无空盒"><a href="#子问题六-球无区别盒子有区别且无空盒" class="headerlink" title="子问题六 球无区别盒子有区别且无空盒"></a>子问题六 球无区别盒子有区别且无空盒</h2><p>同样使用隔板原理，（对照子问题五）但是不允许有空盒，所以球列两边不能放隔板，而且隔板间至少有一个球。也就是在n-1个空位中选择m-1个，放置隔板。放法数为$C_{n-1}^{m-1}$</p>
-<h2 id="子问题七、八-球和盒子均无区别"><a href="#子问题七、八-球和盒子均无区别" class="headerlink" title="子问题七、八 球和盒子均无区别"></a>子问题七、八 球和盒子均无区别</h2><h3 id="分组数"><a href="#分组数" class="headerlink" title="分组数"></a>分组数</h3><p>最后两个子问题需要引入与第二类斯特林(Stirling) 数 $S (n,m)$ 类似的分组数$M(n,r)$来简化。</p>
-<p><em>以下公式的具体证明详见<a href="http://166.111.121.20:9080/mathjournal/XUSJ200202/xusj200202010.caj.pdf" target="_blank" rel="external">参考文献 Ⅰ</a></em></p>
-<p><strong>定义</strong>  将 n 个相同元素分成 r (r≤n)个无序组(每组中至少有一个元素) , 称作相同元素的分组问题, 简称分组问题。所有不同的分法方案总数称作分法种数, 记作$M (n, r)$ , 又称分组数$M (n,r)$。</p>
-<p><strong>引理 1</strong><br>(a)$M(n, 1) = 1$;　　      　　          (b)$M(n, n) = 1$;   　<br>(c)$M(n+1, n) = 1$; 　　    (d)$M(n, n+ k ) = 0$;<br>(e)$M(n, 2) = [n/2] (n, k∈N, [x]为取整函数)$。</p>
-<p><strong>定义 2</strong> 在 n 个相同元素分成 r 个无序组问题里, 当要求其中有 t(t&lt; r) 个单元素组时, 我们将其分法种数记作 $E_{t}(t, r)$;当没有单元素组存在时, 则将其分法种数记为 $F(n, r)$。</p>
-<p><strong>引理 2</strong><br>$E_{_t}(n, r) = M (n- t, r- t)$,  $F (n, r) = M (n- r, r) (0&lt; t&lt; r)$。</p>
-<p><strong>定理 1</strong> 分组数$M (n, r)$满足下面的递推关系:<br>$$M (n, r) = M (n- r, r) + M (n- 1, r- 1)$$</p>
-<p><strong>定理 2</strong> 将 n 个相同元素分成 r 个无序组, 其分法种数<br>$$M (n, r) = M (n - r, 1) + M (n - r, 2) + … + M (n - r, r) = \sum\limits_{i=1}^r M (n - r, i)$$</p>
-<p><strong>定理 3</strong> n 个无区别的小球放到 r 个无标志的盒子里, 当允许空盒存在时, 其放法方案数等于分组从 1 到 r 的分组数之和, 即$$M (n, 1) + M (n, 2) + … + M (n, r) = \sum\limits<em>{i=1}^r<br>M (n, i) = M (n + r, r) (n &gt; r)$$<br>或$$M (n, 1) + M (n, 2) + … + M (n, n) = \sum\limits</em>{i=1}^n M (n, i) = M (2n, n) (n ≤ r)$$</p>
-<p>综上所述可得子问题七、八的方案数：</p>
-<p><img src="http://7xssq8.com1.z0.glb.clouddn.com/%E5%88%86%E7%BB%84%E6%95%B0.png" alt=""></p>
-<h1 id="相关C代码"><a href="#相关C代码" class="headerlink" title="相关C代码"></a>相关C代码</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">*  完成日期： 2016.5   Ver 0.01</span><br><span class="line">*  作者： LiangJun</span><br><span class="line">*  E-mail: liangjunofchina@gmail.com</span><br><span class="line">*/</span><br><span class="line">typedef long long LL;</span><br><span class="line">LL comb(int m, int n)</span><br><span class="line">&#123;	//统计组合数 </span><br><span class="line">	LL sum = 1;</span><br><span class="line">	int k;</span><br><span class="line">	for(k = 1; k &lt;= n; k++)</span><br><span class="line">		sum = (sum * (m - n + k)) / k;</span><br><span class="line">	return sum;</span><br><span class="line">&#125;</span><br><span class="line">LL Stirling(int n, int k)</span><br><span class="line">&#123;	//第二类斯特林数 </span><br><span class="line">	if(n == 0)</span><br><span class="line">		return 1;</span><br><span class="line">	else if(k == 1 || n == k)</span><br><span class="line">		return 1;</span><br><span class="line">	else if(k == 2)</span><br><span class="line">		return ((LL)pow(2, n - 1) - 1);</span><br><span class="line">	else if(n == (k + 1))</span><br><span class="line">		return comb(n, 2);</span><br><span class="line">	else if(n == (k + 2))</span><br><span class="line">		return (comb(n, 3) + 3 * comb(n, 4));</span><br><span class="line">	else if(k == 3)</span><br><span class="line">		return (LL)((pow(3, n - 1) + 1) / 2 - pow(2, n - 1));</span><br><span class="line">	else if(n == (k + 3))</span><br><span class="line">		return (comb(n, 4) + 10 * comb(n, 5) + 15 * comb(n, 6));</span><br><span class="line">	else return (Stirling(n - 1, k - 1) + k * Stirling(n - 1, k));</span><br><span class="line">&#125;</span><br><span class="line">LL M(int n, int r)</span><br><span class="line">&#123;	//分组数 </span><br><span class="line">	if(r == 1 || n == r || n == r + 1)</span><br><span class="line">		return 1;</span><br><span class="line">	else if(n &lt; r)</span><br><span class="line">		return 0;</span><br><span class="line">	else if(r == 2)</span><br><span class="line">		return n/2;</span><br><span class="line">	else return (M(n - r, r) + M(n - 1, r - 1));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>Ⅰ<a href="http://166.111.121.20:9080/mathjournal/XUSJ200202/xusj200202010.caj.pdf" target="_blank" rel="external">球盒模型的一种解决方案 朱春浩 (武汉船舶职业技术学院, 430050)</a></p>
-
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>这里需要引入与第二类斯特林(Stirling) 数 $S (n,m)$ 类似的<a href="ttp://166.111.121.20:9080/mathjournal/XUSJ200202/xusj200202010.caj.pdf" target="_blank" rel="external">分组数$M(n,r)$</a>来简化。</p>
+<h1 id="C代码"><a href="#C代码" class="headerlink" title="C代码"></a>C代码</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="function">LL <span class="title">M</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> r)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(r == <span class="number">1</span> || n == r || n == r + <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(n &lt; r)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(r == <span class="number">2</span>)</span><br><span class="line">		<span class="keyword">return</span> n/<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> (M(n - r, r) + M(n - <span class="number">1</span>, r - <span class="number">1</span>));</span><br><span class="line">&#125; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m, n;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, M(n, m));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -602,7 +514,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#子问题一-球和盒子均有区别且允许有空盒"><span class="nav-number">1.</span> <span class="nav-text">子问题一 球和盒子均有区别且允许有空盒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子问题二-球和盒子均有区别且无空盒"><span class="nav-number">2.</span> <span class="nav-text">子问题二 球和盒子均有区别且无空盒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子问题三-球有区别盒子无区别且无空盒"><span class="nav-number">3.</span> <span class="nav-text">子问题三 球有区别盒子无区别且无空盒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子问题四-球有区别盒子无区别且允许有空盒"><span class="nav-number">4.</span> <span class="nav-text">子问题四 球有区别盒子无区别且允许有空盒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子问题五-球无区别盒子有区别且允许有空盒"><span class="nav-number">5.</span> <span class="nav-text">子问题五 球无区别盒子有区别且允许有空盒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子问题六-球无区别盒子有区别且无空盒"><span class="nav-number">6.</span> <span class="nav-text">子问题六 球无区别盒子有区别且无空盒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子问题七、八-球和盒子均无区别"><span class="nav-number">7.</span> <span class="nav-text">子问题七、八 球和盒子均无区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分组数"><span class="nav-number">7.1.</span> <span class="nav-text">分组数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相关C代码"><span class="nav-number"></span> <span class="nav-text">相关C代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number"></span> <span class="nav-text">参考文献</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C代码"><span class="nav-number">3.</span> <span class="nav-text">C代码</span></a></li></ol></div>
             
           </div>
         </section>
