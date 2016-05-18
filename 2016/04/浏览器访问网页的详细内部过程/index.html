@@ -62,12 +62,12 @@
 <meta property="og:url" content="http://yoursite.com/2016/04/浏览器访问网页的详细内部过程/index.html">
 <meta property="og:site_name" content="LiangJun's Notes">
 <meta property="og:description" content="我们来看当我们在浏览器输入http://liangjunqiang.github.io,幕后所发生的一切。首先http是一个应用层的协议，在这个层的协议，只是一种通讯规范，也就是因为双方要进行通讯，大家要事先约定一个规范。">
-<meta property="og:image" content="http://7xssq8.com1.z0.glb.clouddn.com/chome.png">
-<meta property="og:updated_time" content="2016-05-18T14:03:52.763Z">
+<meta property="og:image" content="http://7xssq8.com1.z0.glb.clouddn.com/browser.png">
+<meta property="og:updated_time" content="2016-05-18T14:21:37.758Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浏览器访问网页的详细内部过程">
 <meta name="twitter:description" content="我们来看当我们在浏览器输入http://liangjunqiang.github.io,幕后所发生的一切。首先http是一个应用层的协议，在这个层的协议，只是一种通讯规范，也就是因为双方要进行通讯，大家要事先约定一个规范。">
-<meta name="twitter:image" content="http://7xssq8.com1.z0.glb.clouddn.com/chome.png">
+<meta name="twitter:image" content="http://7xssq8.com1.z0.glb.clouddn.com/browser.png">
 
 
 
@@ -284,7 +284,7 @@
       
 
       
-        <p><img src="http://7xssq8.com1.z0.glb.clouddn.com/chome.png" alt="chome"><br>我们来看当我们在浏览器输入<a href="http://liangjunqiang.github.io" target="_blank" rel="external">http://liangjunqiang.github.io</a>,幕后所发生的一切。<br>首先http是一个应用层的协议，在这个层的协议，只是一种通讯规范，也就是因为双方要进行通讯，大家要事先约定一个规范。<a id="more"></a></p>
+        <p><img src="http://7xssq8.com1.z0.glb.clouddn.com/browser.png" alt="chome"><br>我们来看当我们在浏览器输入<a href="http://liangjunqiang.github.io" target="_blank" rel="external">http://liangjunqiang.github.io</a>,幕后所发生的一切。<br>首先http是一个应用层的协议，在这个层的协议，只是一种通讯规范，也就是因为双方要进行通讯，大家要事先约定一个规范。<a id="more"></a></p>
 <h4 id="应用层协议（通讯规范）"><a href="#应用层协议（通讯规范）" class="headerlink" title="应用层协议（通讯规范）"></a>应用层协议（通讯规范）</h4><p>1.连接 当我们输入这样一个请求时，首先要建立一个socket连接,因为socket是通过ip和端口建立的，所以之前还有一个DNS解析过程，把<a href="http://liangjunqiang.github.io/" target="_blank" rel="external">http://liangjunqiang.github.io/</a>变成ip，如果url里不包含端口号，则会使用该协议的默认端口号。<br>DNS的过程是这样的：首先我们知道我们本地的机器上在配置网络时都会填写DNS，这样本机就会把这个url发给这个配置的DNS服务器，如果能够找到相应的url则返回其ip，否则该DNS将继续将该解析请求发送给上级DNS，整个DNS可以看做是一个树状结构，该请求将一直发送到根直到得到结果。现在已经拥有了目标ip和端口号，这样我们就可以打开socket连接了。<br>2.请求 连接成功建立后，开始向web服务器发送请求，这个请求一般是GET或POST命令（POST用于FORM参数的传递）。GET命令的格式为：　　GET 路径/文件名 HTTP/1.0<br>文件名指出所访问的文件，HTTP/1.0指出Web浏览器使用的HTTP版本。现在可以发送GET命令：<br>GET /mytest/index.html HTTP/1.0，<br>3.应答 web服务器收到这个请求，进行处理。从它的文档空间中搜索子目录mytest的文件index.html。如果找到该文件，Web服务器把该文件内容传送给相应的Web浏览器。<br>为了告知浏览器，，Web服务器首先传送一些HTTP头信息，然后传送具体内容（即HTTP体信息），HTTP头信息和HTTP体信息之间用一个空行分开。<br>常用的HTTP头信息有：<br>　　① HTTP 1.0 200 OK 　这是Web服务器应答的第一行，列出服务器正在运行的HTTP版本号和应答代码。代码”200 OK”表示请求完成。<br>　　② MIME_Version:1.0　它指示MIME类型的版本。<br>　　③ content_type:类型　这个头信息非常重要，它指示HTTP体信息的MIME类型。如：content_type:text/html指示传送的数据是HTML文档。<br>　　④ content_length:长度值　它指示HTTP体信息的长度（字节）。</p>
 <p>4.闭连接：当应答结束后，Web浏览器与Web服务器必须断开，以保证其它Web浏览器能够与Web服务器建立连接。</p>
 <p>下面我们具体分析其中的数据包在网络中漫游的经历</p>

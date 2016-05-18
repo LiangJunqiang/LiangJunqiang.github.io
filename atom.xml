@@ -234,9 +234,9 @@
     <link href="http://yoursite.com/2016/04/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E9%97%AE%E7%BD%91%E9%A1%B5%E7%9A%84%E8%AF%A6%E7%BB%86%E5%86%85%E9%83%A8%E8%BF%87%E7%A8%8B/"/>
     <id>http://yoursite.com/2016/04/浏览器访问网页的详细内部过程/</id>
     <published>2016-04-20T12:30:46.000Z</published>
-    <updated>2016-05-18T14:03:52.763Z</updated>
+    <updated>2016-05-18T14:21:37.758Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xssq8.com1.z0.glb.clouddn.com/chome.png&quot; alt=&quot;chome&quot;&gt;&lt;br&gt;我们来看当我们在浏览器输入&lt;a href=&quot;http://liangjunqiang.github.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://liangjunqiang.github.io&lt;/a&gt;,幕后所发生的一切。&lt;br&gt;首先http是一个应用层的协议，在这个层的协议，只是一种通讯规范，也就是因为双方要进行通讯，大家要事先约定一个规范。&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xssq8.com1.z0.glb.clouddn.com/browser.png&quot; alt=&quot;chome&quot;&gt;&lt;br&gt;我们来看当我们在浏览器输入&lt;a href=&quot;http://liangjunqiang.github.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://liangjunqiang.github.io&lt;/a&gt;,幕后所发生的一切。&lt;br&gt;首先http是一个应用层的协议，在这个层的协议，只是一种通讯规范，也就是因为双方要进行通讯，大家要事先约定一个规范。&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&quot;应用层协议（通讯规范）&quot;&gt;&lt;a href=&quot;#应用层协议（通讯规范）&quot; class=&quot;headerlink&quot; title=&quot;应用层协议（通讯规范）&quot;&gt;&lt;/a&gt;应用层协议（通讯规范）&lt;/h4&gt;&lt;p&gt;1.连接 当我们输入这样一个请求时，首先要建立一个socket连接,因为socket是通过ip和端口建立的，所以之前还有一个DNS解析过程，把&lt;a href=&quot;http://liangjunqiang.github.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://liangjunqiang.github.io/&lt;/a&gt;变成ip，如果url里不包含端口号，则会使用该协议的默认端口号。&lt;br&gt;DNS的过程是这样的：首先我们知道我们本地的机器上在配置网络时都会填写DNS，这样本机就会把这个url发给这个配置的DNS服务器，如果能够找到相应的url则返回其ip，否则该DNS将继续将该解析请求发送给上级DNS，整个DNS可以看做是一个树状结构，该请求将一直发送到根直到得到结果。现在已经拥有了目标ip和端口号，这样我们就可以打开socket连接了。&lt;br&gt;2.请求 连接成功建立后，开始向web服务器发送请求，这个请求一般是GET或POST命令（POST用于FORM参数的传递）。GET命令的格式为：　　GET 路径/文件名 HTTP/1.0&lt;br&gt;文件名指出所访问的文件，HTTP/1.0指出Web浏览器使用的HTTP版本。现在可以发送GET命令：&lt;br&gt;GET /mytest/index.html HTTP/1.0，&lt;br&gt;3.应答 web服务器收到这个请求，进行处理。从它的文档空间中搜索子目录mytest的文件index.html。如果找到该文件，Web服务器把该文件内容传送给相应的Web浏览器。&lt;br&gt;为了告知浏览器，，Web服务器首先传送一些HTTP头信息，然后传送具体内容（即HTTP体信息），HTTP头信息和HTTP体信息之间用一个空行分开。&lt;br&gt;常用的HTTP头信息有：&lt;br&gt;　　① HTTP 1.0 200 OK 　这是Web服务器应答的第一行，列出服务器正在运行的HTTP版本号和应答代码。代码”200 OK”表示请求完成。&lt;br&gt;　　② MIME_Version:1.0　它指示MIME类型的版本。&lt;br&gt;　　③ content_type:类型　这个头信息非常重要，它指示HTTP体信息的MIME类型。如：content_type:text/html指示传送的数据是HTML文档。&lt;br&gt;　　④ content_length:长度值　它指示HTTP体信息的长度（字节）。&lt;/p&gt;
 &lt;p&gt;4.闭连接：当应答结束后，Web浏览器与Web服务器必须断开，以保证其它Web浏览器能够与Web服务器建立连接。&lt;/p&gt;
 &lt;p&gt;下面我们具体分析其中的数据包在网络中漫游的经历&lt;/p&gt;
@@ -323,7 +323,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://7xssq8.com1.z0.glb.clouddn.com/chome.png&quot; alt=&quot;chome&quot;&gt;&lt;br&gt;我们来看当我们在浏览器输入&lt;a href=&quot;http://liangjunqiang.github.io&quot;&gt;http://liangjunqiang.github.io&lt;/a&gt;,幕后所发生的一切。&lt;br&gt;首先http是一个应用层的协议，在这个层的协议，只是一种通讯规范，也就是因为双方要进行通讯，大家要事先约定一个规范。
+      &lt;p&gt;&lt;img src=&quot;http://7xssq8.com1.z0.glb.clouddn.com/browser.png&quot; alt=&quot;chome&quot;&gt;&lt;br&gt;我们来看当我们在浏览器输入&lt;a href=&quot;http://liangjunqiang.github.io&quot;&gt;http://liangjunqiang.github.io&lt;/a&gt;,幕后所发生的一切。&lt;br&gt;首先http是一个应用层的协议，在这个层的协议，只是一种通讯规范，也就是因为双方要进行通讯，大家要事先约定一个规范。
     
     </summary>
     
