@@ -66,7 +66,7 @@
 <meta property="og:image" content="http://www.forkosh.com/mathtex.cgi? \sum\limits_{i=1}^m M (n, i) = M (n + m, m), (n > m)">
 <meta property="og:image" content="http://www.forkosh.com/mathtex.cgi? \sum\limits_{i=1}^n M(n, i) = M(2n, n), (n \leq m)">
 <meta property="og:image" content="http://7xssq8.com1.z0.glb.clouddn.com/%E5%88%86%E7%BB%84%E6%95%B0.png">
-<meta property="og:updated_time" content="2016-05-18T14:54:59.840Z">
+<meta property="og:updated_time" content="2016-05-19T04:52:59.042Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="放球问题（球盒模型）">
 <meta name="twitter:description" content="昨天看到一道编程题数的划分，想想其实就是典型的放球问题的一个子问题，于是便把其它的子问题也试着去理解、整理。">
@@ -371,9 +371,10 @@
 <p><em>以下公式的具体证明详见<a href="http://166.111.121.20:9080/mathjournal/XUSJ200202/xusj200202010.caj.pdf" target="_blank" rel="external">参考文献 Ⅰ</a></em></p>
 <p><strong>定义</strong>  将 n 个相同元素分成 r (r≤n)个无序组(每组中至少有一个元素) , 称作相同元素的分组问题, 简称分组问题。所有不同的分法方案总数称作分法种数, 记作$M (n, r)$ , 又称分组数$M (n,r)$。</p>
 <p><strong>引理 1</strong><br>(a)$M(n, 1) = 1$;　　      　　          (b)$M(n, n) = 1$;   　<br>(c)$M(n+1, n) = 1$; 　　    (d)$M(n, n+ k ) = 0$;<br>(e)$M(n, 2) = [n/2] (n, k∈N, [x]为取整函数)$。</p>
-<p><strong>定义 2</strong> 在 n 个相同元素分成 r 个无序组问题里, 当要求其中有 t(t&lt; r) 个单元素组时, 我们将其分法种数记作 $E_{t}(t, r)$;当没有单元素组存在时, 则将其分法种数记为 $F(n, r)$。</p>
-<p><strong>引理 2</strong><br>$E_{_t}(n, r) = M (n- t, r- t)$,  $F (n, r) = M (n- r, r) (0&lt; t&lt; r)$。</p>
-<p><strong>定理 1</strong> 分组数$M (n, r)$满足下面的递推关系:<br>$$M (n, r) = M (n- r, r) + M (n- 1, r- 1)$$</p>
+<p>我们注意到: 单元素组的存在与否, 可以使分组问题得到简化!<br>例如: 其中含有一个单元素时的分法, 等同于撇开这一单元素组(单球盒) , 而让其它 n- 1 个球, 分到另外 r- 1 个无序组的分法, 这思路可以推广到 t 个单元素组的情况。<br>再如: 当每组内均多入一个元素(即至少有两个元素时) , 其分法应该与每组都减去一个元素, 即 n- r 个元素分成 r 个无序组的分法相等。</p>
+<p>为了理清思路，我们来定义一下这两种情况：在 n 个相同元素分成 r 个无序组问题里, 当要求其中有 t(t&lt; r) 个单元素组时, 我们将其分法种数记作 $E_{t}(t, r)$;当没有单元素组存在时, 则将其分法种数记为 $F(n, r)$。</p>
+<p>根据上面的分析简化，我们有：<br>$E_{_t}(n, r) = M (n- t, r- t)$,  $F (n, r) = M (n- r, r) (0&lt; t&lt; r)$。</p>
+<p>根据排列组合的加法原理, 分组数$M (n, r)$满足下面的递推关系:<br>$$M (n, r) = M (n- r, r) + M (n- 1, r- 1)$$</p>
 <p><strong>定理 2</strong> 将 n 个相同元素分成 r 个无序组, 其分法种数<br>$$M (n, r) = M (n - r, 1) + M (n - r, 2) + … + M (n - r, r) = \sum\limits_{i=1}^r M (n - r, i)$$</p>
 <p><strong>定理 3</strong> n 个无区别的小球放到 r 个无标志的盒子里, 当允许空盒存在时, 其放法方案数等于分组从 1 到 r 的分组数之和, 即$\sum\limits<em>{i=1}^r M (n, i) = M (n + r, r), (n &gt; r)”&gt;$ 或 $\sum\limits</em>{i=1}^n M(n, i) = M(2n, n), (n \leq r)$</p>
 <p>综上所述可得子问题七、八的方案数：</p>
