@@ -38,7 +38,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="蓝桥杯,第三届蓝桥杯,结果填空," />
+  <meta name="keywords" content="蓝桥杯,第三届蓝桥杯,代码填空," />
 
 
 
@@ -58,13 +58,13 @@
 
 <meta name="description" content="第三届蓝桥杯题解汇总">
 <meta property="og:type" content="article">
-<meta property="og:title" content="星期几">
-<meta property="og:url" content="http://yoursite.com/2016/05/星期几/index.html">
+<meta property="og:title" content="数据压缩">
+<meta property="og:url" content="http://yoursite.com/2016/05/数据压缩/index.html">
 <meta property="og:site_name" content="LiangJun's Notes">
 <meta property="og:description" content="第三届蓝桥杯题解汇总">
-<meta property="og:updated_time" content="2016-05-31T13:48:05.625Z">
+<meta property="og:updated_time" content="2016-05-31T13:55:30.437Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="星期几">
+<meta name="twitter:title" content="数据压缩">
 <meta name="twitter:description" content="第三届蓝桥杯题解汇总">
 
 
@@ -83,7 +83,7 @@
   };
 </script>
 
-  <title> 星期几 | LiangJun's Notes </title>
+  <title> 数据压缩 | LiangJun's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -232,7 +232,7 @@
             
             
               
-                星期几
+                数据压缩
               
             
           </h1>
@@ -244,7 +244,7 @@
               <i class="fa fa-calendar"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-31T21:06:38+08:00" content="2016-05-31">
+            <time itemprop="dateCreated" datetime="2016-05-31T21:52:58+08:00" content="2016-05-31">
               2016-05-31
             </time>
           </span>
@@ -258,8 +258,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/05/星期几/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/星期几/" itemprop="commentsCount"></span>
+                <a href="/2016/05/数据压缩/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/数据压缩/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -282,11 +282,15 @@
       
 
       
-        <p><strong><a href="http://liangjunqiang.top/2016/05/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/" target="_blank" rel="external">第三届蓝桥杯题解汇总</a></strong><br><a id="more"></a><br>结果填空 (满分5分)</p>
-<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>1949年的国庆节（10月1日）是星期六。<br>    今年（2012）的国庆节是星期一。<br>    那么，从建国到现在，有几次国庆节正好是星期日呢？</p>
-<p>只要答案，不限手段！<br>    可以用windows日历，windows计算器，Excel公式，。。。。。<br>    当然，也可以编程！<br>    不要求写出具体是哪些年，只要一个数目！</p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>四年一润，百年不润，四百年再润<br>每年10月2日到十二月31日共91天，是7的倍数，weekday增量为0<br>润年366天，对7求余余数为2，本年国庆weekday增量为2<br>平年365天，对7求余余数为1，本年国庆weekday增量为1<br>要注意对7求余要先集体减小一个单位，求余后再集体增大一个单位<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isRunNian</span><span class="params">(<span class="keyword">int</span> year)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>((year % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; year % <span class="number">100</span> != <span class="number">0</span>) || year % <span class="number">400</span> == <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> start_year = <span class="number">1949</span>, end_year = <span class="number">2012</span>, i;</span><br><span class="line">	<span class="keyword">int</span> wday = <span class="number">6</span>, count = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(i = start_year + <span class="number">1</span>; i &lt; end_year; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(isRunNian(i))&#123;</span><br><span class="line">			wday = (wday<span class="number">-1</span>+<span class="number">2</span>)%<span class="number">7</span>+<span class="number">1</span>;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d is RunNian\n"</span>, i);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			wday = (wday<span class="number">-1</span>+<span class="number">1</span>)%<span class="number">7</span>+<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(wday == <span class="number">7</span>)&#123;</span><br><span class="line">			count++;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d is Sunday\n"</span>, i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Sunday count is %d\n"</span>, count);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h3><p>9</p>
+        <p><strong><a href="http://liangjunqiang.top/2016/05/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/" target="_blank" rel="external">第三届蓝桥杯题解汇总</a></strong><br><a id="more"></a><br>【代码填空】(满分16分)</p>
+<p>某工业监控设备不断发回采样数据。每个数据是一个整数(0到1000之间)。各个数据间用空白字符（空格，TAB或回车换行）分隔。这些数据以文本形式被存储在文件中。</p>
+<p>因为大多数时候，相邻的采样间隔数据是相同的，可以利用这个特征做数据的压缩存储。其方法是：对n(n&gt;1)个连续相同的数字只记录n和该数字本身；对m(m&gt;0)个连续不重复的数字，则记录 m*-1 和这些数字本身（之所以用负数，是为了与第一种情况区分，便于解压缩）。</p>
+<p>例如：采样数字：<br>    12 34 34 25 25 25 25 11 15 17 28 14 22 22 22 13<br>则根据上述规则变化后：<br>    -1 12 2 34 4 25 -5 11 15 17 28 14 3 22 -1 13</p>
+<p>下面的程序实现了这个功能。请仔细阅读分析代码，填写空白的部分。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span>* buf, <span class="keyword">int</span> c, FILE* fp)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">if</span>(s)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">fprintf</span>(fp, <span class="string">"%d %d "</span>, c, *buf);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">fprintf</span>(fp, <span class="string">"%d "</span>, -c);</span><br><span class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;c; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">fprintf</span>(fp, <span class="string">"%d "</span>, buf[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dopack</span><span class="params">(FILE* r, FILE* w)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> buf[BUF_N];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> pos = <span class="number">0</span>;  <span class="comment">// 下一个数字在buf中将要存放的位置</span></span><br><span class="line">	<span class="keyword">int</span> c = <span class="number">0</span>;    <span class="comment">// 当前段已读入的整数个数</span></span><br><span class="line">	<span class="keyword">int</span> pst; </span><br><span class="line">	<span class="keyword">int</span> cst;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">fscanf</span>(r, <span class="string">"%d"</span>, buf+pos)==<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(c==<span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			c = pos = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(c==<span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			pst = buf[<span class="number">0</span>] == buf[<span class="number">1</span>];</span><br><span class="line">			pos = pos + <span class="number">1</span> - pst;</span><br><span class="line">			c = <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		cst = buf[pos<span class="number">-1</span>] == buf[pos];</span><br><span class="line">		<span class="keyword">if</span>(pst &amp;&amp; !cst)</span><br><span class="line">		&#123;</span><br><span class="line">			pop(pst, buf, c, w);</span><br><span class="line">			buf[<span class="number">0</span>] = buf[<span class="number">1</span>];</span><br><span class="line">			c = pos = <span class="number">1</span>;</span><br><span class="line">			pst = cst;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(!pst &amp;&amp; cst || pos == BUF_N<span class="number">-1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			pop(pst, buf, c<span class="number">-1</span>, w);</span><br><span class="line">			buf[<span class="number">0</span>] = buf[pos<span class="number">-1</span>];</span><br><span class="line">			c = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span>(!cst)</span><br><span class="line">			&#123;</span><br><span class="line">				buf[<span class="number">1</span>] = buf[pos];</span><br><span class="line">				pos = <span class="number">2</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				pos = <span class="number">1</span>;</span><br><span class="line">				pst = ______________;  <span class="comment">// 填空1</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			c++;</span><br><span class="line">			<span class="keyword">if</span>(!pst) pos++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="comment">// while</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(c&gt;<span class="number">0</span>) _____________________________;   <span class="comment">// 填空2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	FILE* rfp;</span><br><span class="line">	FILE* wfp;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>((rfp=fopen(RFILE, <span class="string">"r"</span>)) == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"can not open %s!\n"</span>, RFILE);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>((wfp=fopen(WFILE, <span class="string">"w"</span>)) == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"can not open %s!\n"</span>, WFILE);</span><br><span class="line">		fclose(rfp);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">2</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	dopack(rfp, wfp);</span><br><span class="line"></span><br><span class="line">	fclose(wfp);</span><br><span class="line">	fclose(rfp);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>【注意】<br>    只填写缺少的部分，不要抄写已有的代码。<br>    所填写代码不超过1条语句（句中不会含有分号）<br>    所填代码长度不超过256个字符。<br>    答案写在“解答.txt”中，不要写在这里！</p>
+<p>###分析<br>第一个空的情况是：前面的数字各不相同，最后两个相同，去掉前面BUF_N-3个后，剩下两个相等的数，故pst=1。<br>第二个空是因为可能还有未处理的数，而pst就是标志前面待处理的数是相同还是不同</p>
+<p>###答案<br><code>1   //参考答案：cst
+pop(pst, buf, c, w)</code></p>
 
       
     </div>
@@ -332,7 +336,7 @@
           
             <a href="/tags/第三届蓝桥杯/" rel="tag">#第三届蓝桥杯</a>
           
-            <a href="/tags/结果填空/" rel="tag">#结果填空</a>
+            <a href="/tags/代码填空/" rel="tag">#代码填空</a>
           
         </div>
       
@@ -341,17 +345,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/当骨灰级数独题遇上程序/" rel="next" title="当骨灰级数独题遇上程序">
-                <i class="fa fa-chevron-left"></i> 当骨灰级数独题遇上程序
+              <a href="/2016/05/第三届蓝桥杯题解/" rel="next" title="第三届蓝桥杯题解">
+                <i class="fa fa-chevron-left"></i> 第三届蓝桥杯题解
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/第三届蓝桥杯题解/" rel="prev" title="第三届蓝桥杯题解">
-                第三届蓝桥杯题解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -366,10 +366,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/05/星期几/"
-     data-title="星期几"
+        <div class="ds-share flat" data-thread-key="2016/05/数据压缩/"
+     data-title="数据压缩"
      data-content=""
-     data-url="http://yoursite.com/2016/05/星期几/">
+     data-url="http://yoursite.com/2016/05/数据压缩/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -396,8 +396,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/星期几/"
-           data-title="星期几" data-url="http://yoursite.com/2016/05/星期几/">
+      <div class="ds-thread" data-thread-key="2016/05/数据压缩/"
+           data-title="数据压缩" data-url="http://yoursite.com/2016/05/数据压缩/">
       </div>
     
   </div>
@@ -541,7 +541,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#答案"><span class="nav-number">3.</span> <span class="nav-text">答案</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
