@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-05-21T03:14:36.112Z</updated>
+  <updated>2016-05-31T13:28:44.765Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第三届蓝桥杯题解</title>
+    <link href="http://yoursite.com/2016/05/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/"/>
+    <id>http://yoursite.com/2016/05/第三届蓝桥杯题解/</id>
+    <published>2016-05-31T13:27:27.000Z</published>
+    <updated>2016-05-31T13:28:44.765Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;第三届蓝桥杯题解&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;第三届蓝桥杯题解&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="蓝桥杯" scheme="http://yoursite.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+      <category term="第三届蓝桥杯" scheme="http://yoursite.com/tags/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>星期几</title>
+    <link href="http://yoursite.com/2016/05/%E6%98%9F%E6%9C%9F%E5%87%A0/"/>
+    <id>http://yoursite.com/2016/05/星期几/</id>
+    <published>2016-05-31T13:06:38.000Z</published>
+    <updated>2016-05-31T13:26:39.460Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;第三届蓝桥杯题解&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;结果填空 (满分5分)&lt;/p&gt;
+&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;p&gt;1949年的国庆节（10月1日）是星期六。&lt;br&gt;    今年（2012）的国庆节是星期一。&lt;br&gt;    那么，从建国到现在，有几次国庆节正好是星期日呢？&lt;/p&gt;
+&lt;p&gt;只要答案，不限手段！&lt;br&gt;    可以用windows日历，windows计算器，Excel公式，。。。。。&lt;br&gt;    当然，也可以编程！&lt;br&gt;    不要求写出具体是哪些年，只要一个数目！&lt;/p&gt;
+&lt;h2 id=&quot;分析&quot;&gt;&lt;a href=&quot;#分析&quot; class=&quot;headerlink&quot; title=&quot;分析&quot;&gt;&lt;/a&gt;分析&lt;/h2&gt;&lt;p&gt;四年一润，百年不润，四百年再润&lt;br&gt;每年10月2日到十二月31日共91天，是7的倍数，weekday增量为0&lt;br&gt;润年366天，对7求余余数为2，本年国庆weekday增量为2&lt;br&gt;平年365天，对7求余余数为1，本年国庆weekday增量为1&lt;br&gt;要注意对7求余要先集体减小一个单位，求余后再集体增大一个单位&lt;br&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;isRunNian&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; year)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;((year % &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt; == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;amp;&amp;amp; year % &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt; != &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) || year % &lt;span class=&quot;number&quot;&gt;400&lt;/span&gt; == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; start_year = &lt;span class=&quot;number&quot;&gt;1949&lt;/span&gt;, end_year = &lt;span class=&quot;number&quot;&gt;2012&lt;/span&gt;, i;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; wday = &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;, count = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(i = start_year + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;lt; end_year; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(isRunNian(i))&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			wday = (wday&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;+&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)%&lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d is RunNian\n&quot;&lt;/span&gt;, i);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			wday = (wday&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)%&lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(wday == &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			count++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d is Sunday\n&quot;&lt;/span&gt;, i);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;Sunday count is %d\n&quot;&lt;/span&gt;, count);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;答案&quot;&gt;&lt;a href=&quot;#答案&quot; class=&quot;headerlink&quot; title=&quot;答案&quot;&gt;&lt;/a&gt;答案&lt;/h2&gt;&lt;p&gt;9&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;第三届蓝桥杯题解&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="蓝桥杯" scheme="http://yoursite.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+      <category term="第三届蓝桥杯" scheme="http://yoursite.com/tags/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+      <category term="结果填空" scheme="http://yoursite.com/tags/%E7%BB%93%E6%9E%9C%E5%A1%AB%E7%A9%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>当骨灰级数独题遇上程序</title>
@@ -36,11 +88,11 @@
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数独" scheme="http://yoursite.com/tags/%E6%95%B0%E7%8B%AC/"/>
     
       <category term="回溯" scheme="http://yoursite.com/tags/%E5%9B%9E%E6%BA%AF/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
