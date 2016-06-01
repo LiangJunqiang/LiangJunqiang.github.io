@@ -62,10 +62,12 @@
 <meta property="og:url" content="http://yoursite.com/2016/06/高僧斗法/index.html">
 <meta property="og:site_name" content="LiangJun's Notes">
 <meta property="og:description" content="第四届蓝桥杯题解汇总">
-<meta property="og:updated_time" content="2016-06-01T16:45:59.810Z">
+<meta property="og:image" content="http://7xssq8.com1.z0.glb.clouddn.com/%E5%9B%BE1.jpg">
+<meta property="og:updated_time" content="2016-06-01T16:48:49.271Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="高僧斗法">
 <meta name="twitter:description" content="第四届蓝桥杯题解汇总">
+<meta name="twitter:image" content="http://7xssq8.com1.z0.glb.clouddn.com/%E5%9B%BE1.jpg">
 
 
 
@@ -283,7 +285,36 @@
 
       
         <p><strong><a href="http://liangjunqiang.top/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/" target="_blank" rel="external">第四届蓝桥杯题解汇总</a></strong><br><a id="more"></a></p>
-<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>古时丧葬活动中经常请高僧做法事。仪式结束后，有时会有“高僧斗法”的趣味节目，以舒缓压抑的气氛。</p>
+<p>节目大略步骤为：先用粮食（一般是稻米）在地上“画”出若干级台阶（表示N级浮屠）。又有若干小和尚随机地“站”在某个台阶上。最高一级台阶必须站人，其它任意。(如图1所示)</p>
+<p>两位参加游戏的法师分别指挥某个小和尚向上走任意多级的台阶，但会被站在高级台阶上的小和尚阻挡，不能越过。两个小和尚也不能站在同一台阶，也不能向低级台阶移动。</p>
+<p>两法师轮流发出指令，最后所有小和尚必然会都挤在高段台阶，再也不能向上移动。轮到哪个法师指挥时无法继续移动，则游戏结束，该法师认输。<br><img src="http://7xssq8.com1.z0.glb.clouddn.com/%E5%9B%BE1.jpg" alt=""><br>对于已知的台阶数和小和尚的分布位置，请你计算先发指令的法师该如何决策才能保证胜出。</p>
+<p>输入数据为一行用空格分开的N个整数，表示小和尚的位置。台阶序号从1算起，所以最后一个小和尚的位置即是台阶的总数。（N&lt;100, 台阶总数&lt;1000）</p>
+<p>输出为一行用空格分开的两个整数: A B, 表示把A位置的小和尚移动到B位置。若有多个解，输出A值较小的解，若无解则输出-1。</p>
+<p>例如：<br>用户输入：<br>1 5 9<br>则程序输出：<br>1 4</p>
+<p>再如：<br>用户输入：<br>1 5 8 10<br>则程序输出：<br>1 3</p>
+<p>资源约定：<br>峰值内存消耗 &lt; 64M<br>CPU消耗  &lt; 1000ms</p>
+<p>请严格按要求输出，不要画蛇添足地打印类似：“请您输入…” 的多余内容。</p>
+<p>所有代码放在同一个源文件中，调试通过后，拷贝提交该源码。</p>
+<p>注意: main函数需要返回0<br>注意: 只使用ANSI C/ANSI C++ 标准，不要调用依赖于编译环境或操作系统的特殊函数。<br>注意: 所有依赖的函数必须明确地在源文件中 #include <xxx>， 不能通过工程设置而省略常用头文件。</xxx></p>
+<p>提交时，注意选择所期望的编译器类型(千万不要混淆c和cpp)。</p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>这题是Nim博弈的变形。</p>
+<blockquote>
+<p>Nim游戏是组合游戏(Combinatorial Games)的一种，准确来说，属于“Impartial Combinatorial Games”（以下简称ICG）。满足以下条件的游戏是ICG（可能不太严谨）：1、有两名选手；2、两名选手交替对游戏进行移动(move)，每次一步，选手可以在（一般而言）有限的合法移动集合中任选一种进行移动；3、对于游戏的任何一种可能的局面，合法的移动集合只取决于这个局面本身，不取决于轮到哪名选手操作、以前的任何操作、骰子的点数或者其它什么因素； 4、如果轮到某名选手移动，且这个局面的合法的移动集合为空（也就是说此时无法进行移动），则这名选手负。</p>
+</blockquote>
+<pre><code>Nim取子游戏是由两个人面对若干堆硬币（或石子）进行的游戏。设有k&gt;=1堆硬币，各堆分别含有N1，N2，……NK枚硬币。游戏的目的就是选择最后剩下的硬币。游戏法则如下：
+1．两个游戏人交替进行游戏（游戏人I和游戏人II）；
+2．当轮到每个游戏人取子时，选择这些堆中的一堆，并从所选的堆中取走至少一枚硬币（游戏人可以取走他所选堆中的全部硬币）；
+3．当所有的堆都变成空堆时，最后取子的游戏人即为胜者。
+这个游戏中的变量是堆数k和各堆的硬币数N1，N2，……Nk。对应的组合问题是，确定游戏人I获胜还是游戏人II获胜以及两个游戏人应该如何取子才能保证自己获胜（获胜策略）。
+</code></pre><p>游戏可以提取变量抽象成以上游戏模型，则可以直接使用结论</p>
+<blockquote>
+<p>所有变量异或结果不为零，则能保证先手胜。操作技巧是设法从N-position(异或结果不为零)移动到P-position(异或结果为零)</p>
+</blockquote>
+<p>此题就利用了这结论，变量是$d[0], d[2],…d[2k]$</p>
+<p>###答案</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXN	101</span></span><br><span class="line"><span class="keyword">int</span> a[MAXN], d[MAXN];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>, n, yh, j, k;</span><br><span class="line">	<span class="keyword">char</span> c;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%c"</span>, &amp;a[i], &amp;c);</span><br><span class="line">	i++;</span><br><span class="line">	<span class="keyword">while</span>(c != <span class="string">'\n'</span>)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%c"</span>, &amp;a[i], &amp;c);</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	n = i;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++)</span><br><span class="line">		d[i] = a[i + <span class="number">1</span>] - a[i] - <span class="number">1</span>;</span><br><span class="line">	d[i] = <span class="number">0</span>;</span><br><span class="line">	yh = d[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">2</span>; i &lt; n; i += <span class="number">2</span>)</span><br><span class="line">		yh ^= d[i];</span><br><span class="line">	<span class="keyword">if</span>(yh == <span class="number">0</span>)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"-1\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j = <span class="number">1</span>; j &lt;= d[i]; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			d[i] -= j;</span><br><span class="line">			<span class="keyword">if</span>(i &gt; <span class="number">0</span>)</span><br><span class="line">				d[i - <span class="number">1</span>] += j;</span><br><span class="line">			yh = d[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">for</span>(k = <span class="number">2</span>; k &lt; n; k += <span class="number">2</span>)</span><br><span class="line">				yh ^= d[k];</span><br><span class="line">			<span class="keyword">if</span>(yh == <span class="number">0</span>)&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, a[i], a[i] + j);</span><br><span class="line">				<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			d[i] += j;</span><br><span class="line">			<span class="keyword">if</span>(i &gt; <span class="number">0</span>)</span><br><span class="line">				d[i - <span class="number">1</span>] -= j;			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -537,7 +568,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a></li></ol></div>
             
           </div>
         </section>
