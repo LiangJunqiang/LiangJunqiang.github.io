@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-01T13:06:45.323Z</updated>
+  <updated>2016-06-01T13:13:32.474Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://yoursite.com/2016/05/%E6%96%B9%E5%9D%97%E5%A1%AB%E6%95%B0/"/>
     <id>http://yoursite.com/2016/05/方块填数/</id>
     <published>2016-05-31T14:26:17.000Z</published>
-    <updated>2016-06-01T13:06:45.323Z</updated>
+    <updated>2016-06-01T13:13:32.474Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/05/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第三届蓝桥杯题解汇总&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;【编程题】(满分33分)&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/05/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第三届蓝桥杯题解汇总&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;【编程题】(满分33分)&lt;/p&gt;
 &lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h3&gt;&lt;p&gt;“数独”是当下炙手可热的智力游戏。一般认为它的起源是“拉丁方块”，是大数学家欧拉于1783年发明的。&lt;/p&gt;
 &lt;p&gt;如图[1.jpg]所示：6x6的小格被分为6个部分（图中用不同的颜色区分）,每个部分含有6个小格（以下也称为分组）。&lt;/p&gt;
 &lt;p&gt;开始的时候，某些小格中已经填写了字母（ABCDEF之一）。需要在所有剩下的小格中补填字母。&lt;/p&gt;
