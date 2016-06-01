@@ -61,6 +61,46 @@
   </entry>
   
   <entry>
+    <title>农场阳光</title>
+    <link href="http://yoursite.com/2016/06/%E5%86%9C%E5%9C%BA%E9%98%B3%E5%85%89/"/>
+    <id>http://yoursite.com/2016/06/农场阳光/</id>
+    <published>2016-06-01T13:13:30.000Z</published>
+    <updated>2016-06-01T16:59:04.646Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第四届蓝桥杯题解汇总&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h3&gt;&lt;p&gt;X星球十分特殊，它的自转速度与公转速度相同，所以阳光总是以固定的角度照射。&lt;/p&gt;
+&lt;p&gt;最近，X星球为发展星际旅游业，把空间位置出租给Y国游客来晒太阳。每个租位是漂浮在空中的圆盘形彩云（圆盘与地面平行）。当然，这会遮挡住部分阳光，被遮挡的土地植物无法生长。&lt;/p&gt;
+&lt;p&gt;本题的任务是计算某个农场宜于作物生长的土地面积有多大。&lt;/p&gt;
+&lt;p&gt;输入数据的第一行包含两个整数a, b，表示某农场的长和宽分别是a和b，此时，该农场的范围是由坐标(0, 0, 0), (a, 0, 0), (a, b, 0), (0, b, 0)围成的矩形区域。&lt;/p&gt;
+&lt;p&gt;第二行包含一个实数g，表示阳光照射的角度。简单起见，我们假设阳光光线是垂直于农场的宽的，此时正好和农场的长的夹角是g度，此时，空间中的一点(x, y, z)在地面的投影点应该是(x + z * ctg(g度), y, 0)，其中ctg(g度)表示g度对应的余切值。&lt;/p&gt;
+&lt;p&gt;第三行包含一个非负整数n，表示空中租位个数。&lt;/p&gt;
+&lt;p&gt;接下来 n 行，描述每个租位。其中第i行包含4个整数xi, yi, zi, ri，表示第i个租位彩云的圆心在(xi, yi, zi)位置，圆半径为ri。&lt;/p&gt;
+&lt;p&gt;要求输出一个实数，四舍五入保留两位有效数字，表示农场里能长庄稼的土地的面积。&lt;/p&gt;
+&lt;p&gt;例如：&lt;br&gt;用户输入：&lt;br&gt;10 10&lt;br&gt;90.0&lt;br&gt;1&lt;br&gt;5 5 10 5&lt;br&gt;程序应该输出：&lt;br&gt;21.46&lt;/p&gt;
+&lt;p&gt;再例如：&lt;br&gt;用户输入：&lt;br&gt;8 8&lt;br&gt;90.0&lt;br&gt;1&lt;br&gt;4 4 10 5&lt;br&gt;程序应该输出：&lt;br&gt;1.81&lt;/p&gt;
+&lt;p&gt;样例3：&lt;br&gt;用户输入：&lt;br&gt;20 10&lt;br&gt;45.0&lt;br&gt;2&lt;br&gt;5 0 5 5&lt;br&gt;8 6 14 6&lt;br&gt;程序输出：&lt;br&gt;130.15&lt;/p&gt;
+&lt;p&gt;资源约定：&lt;br&gt;峰值内存消耗 &amp;lt; 64M&lt;br&gt;CPU消耗  &amp;lt; 1000ms&lt;/p&gt;
+&lt;p&gt;请严格按要求输出，不要画蛇添足地打印类似：“请您输入…” 的多余内容。&lt;br&gt;所有代码放在同一个源文件中，调试通过后，拷贝提交该源码。&lt;/p&gt;
+&lt;p&gt;注意: main函数需要返回0&lt;br&gt;注意: 只使用ANSI C/ANSI C++ 标准，不要调用依赖于编译环境或操作系统的特殊函数。&lt;br&gt;注意: 所有依赖的函数必须明确地在源文件中 #include &lt;xxx&gt;， 不能通过工程设置而省略常用头文件。&lt;br&gt;提交时，注意选择所期望的编译器类型(千万不要混淆c和cpp)。&lt;/xxx&gt;&lt;/p&gt;
+&lt;h3 id=&quot;分析&quot;&gt;&lt;a href=&quot;#分析&quot; class=&quot;headerlink&quot; title=&quot;分析&quot;&gt;&lt;/a&gt;分析&lt;/h3&gt;&lt;p&gt;先把所有变长放大一百倍再计算。利用圆心与各点距离，统计未被遮光的点数，从而求出比例，再乘农场面积。&lt;/p&gt;
+&lt;h3 id=&quot;答案&quot;&gt;&lt;a href=&quot;#答案&quot; class=&quot;headerlink&quot; title=&quot;答案&quot;&gt;&lt;/a&gt;答案&lt;/h3&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;math.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;define&lt;/span&gt; ZOOM	100&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;define&lt;/span&gt; PI	3.1415926&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;define&lt;/span&gt; false	0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;define&lt;/span&gt; true	1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n, _a, _b, a, b;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; g;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;struct&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; x, y, z, r;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;zhuwei;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;zhuwei zw[&lt;span class=&quot;number&quot;&gt;101&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;dis&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; x1, &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; y1, &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; x2, &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; y2)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;sqrt&lt;/span&gt;((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i, j, k, flag, sum = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;scanf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d%d%lf%d&quot;&lt;/span&gt;, &amp;amp;_a, &amp;amp;_b, &amp;amp;g, &amp;amp;n);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	a = _a * ZOOM;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	b = _b * ZOOM;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; n; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;scanf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%lf%lf%lf%lf&quot;&lt;/span&gt;, &amp;amp;zw[i].x, &amp;amp;zw[i].y, &amp;amp;zw[i].z, &amp;amp;zw[i].r);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		zw[i].y *= ZOOM;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		zw[i].r *= ZOOM;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(g == &lt;span class=&quot;number&quot;&gt;90.0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			zw[i].x *= ZOOM;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			zw[i].x = ((&lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt;)zw[i].x + zw[i].z / &lt;span class=&quot;built_in&quot;&gt;tan&lt;/span&gt;(g/&lt;span class=&quot;number&quot;&gt;180.0&lt;/span&gt;*PI)) * ZOOM;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;lt;= a; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(j = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; j &amp;lt;= b; j++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			flag = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(k = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; k &amp;lt; n; k++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(dis(zw[k].x, zw[k].y, i, j) &amp;lt; zw[k].r)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					flag = &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(flag)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				sum++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%.2lf\n&quot;&lt;/span&gt;, sum/(&lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt;)(a * b) * _a * _b);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/&quot;&gt;第四届蓝桥杯题解汇总&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="蓝桥杯" scheme="http://yoursite.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+      <category term="编程题" scheme="http://yoursite.com/tags/%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
+    
+      <category term="第四届蓝桥杯" scheme="http://yoursite.com/tags/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>高僧斗法</title>
     <link href="http://yoursite.com/2016/06/%E9%AB%98%E5%83%A7%E6%96%97%E6%B3%95/"/>
     <id>http://yoursite.com/2016/06/高僧斗法/</id>
@@ -137,9 +177,9 @@
     
       <category term="蓝桥杯" scheme="http://yoursite.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
     
-      <category term="代码填空" scheme="http://yoursite.com/tags/%E4%BB%A3%E7%A0%81%E5%A1%AB%E7%A9%BA/"/>
-    
       <category term="第四届蓝桥杯" scheme="http://yoursite.com/tags/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+      <category term="代码填空" scheme="http://yoursite.com/tags/%E4%BB%A3%E7%A0%81%E5%A1%AB%E7%A9%BA/"/>
     
   </entry>
   
@@ -167,9 +207,9 @@
     
       <category term="蓝桥杯" scheme="http://yoursite.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
     
-      <category term="结果填空" scheme="http://yoursite.com/tags/%E7%BB%93%E6%9E%9C%E5%A1%AB%E7%A9%BA/"/>
-    
       <category term="第四届蓝桥杯" scheme="http://yoursite.com/tags/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+      <category term="结果填空" scheme="http://yoursite.com/tags/%E7%BB%93%E6%9E%9C%E5%A1%AB%E7%A9%BA/"/>
     
   </entry>
   
@@ -199,9 +239,9 @@
     
       <category term="蓝桥杯" scheme="http://yoursite.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
     
-      <category term="结果填空" scheme="http://yoursite.com/tags/%E7%BB%93%E6%9E%9C%E5%A1%AB%E7%A9%BA/"/>
-    
       <category term="第四届蓝桥杯" scheme="http://yoursite.com/tags/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+      <category term="结果填空" scheme="http://yoursite.com/tags/%E7%BB%93%E6%9E%9C%E5%A1%AB%E7%A9%BA/"/>
     
   </entry>
   
