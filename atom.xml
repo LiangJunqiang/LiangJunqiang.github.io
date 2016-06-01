@@ -53,13 +53,18 @@
   </entry>
   
   <entry>
-    <title>猜灯谜</title>
+    <title>连续奇数和</title>
     <link href="http://yoursite.com/2016/06/%E8%BF%9E%E7%BB%AD%E5%A5%87%E6%95%B0%E5%92%8C/"/>
     <id>http://yoursite.com/2016/06/连续奇数和/</id>
     <published>2016-06-01T13:06:39.000Z</published>
-    <updated>2016-06-01T16:29:54.579Z</updated>
+    <updated>2016-06-01T16:32:05.299Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第四届蓝桥杯题解汇总&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h3&gt;&lt;p&gt;小明看到一本书上写着：任何数字的立方都可以表示为连续奇数的和。&lt;br&gt;比如：&lt;br&gt;2^3 = 8 = 3 + 5&lt;br&gt;3^3 = 27 = 7 + 9 + 11&lt;br&gt;4^3 = 64 = 1 + 3 + … + 15&lt;br&gt;虽然他没有想出怎么证明，但他想通过计算机进行验证。&lt;/p&gt;
+&lt;p&gt;请你帮助小明写出 111的立方之连续奇数和表示法的起始数字。如果有多个表示方案，选择起始数字小的方案。        &lt;/p&gt;
+&lt;p&gt;请严格按照要求，通过浏览器提交答案。&lt;br&gt;注意：只提交一个整数，不要写其它附加内容，比如：说明性的文字。&lt;/p&gt;
+&lt;h3 id=&quot;分析&quot;&gt;&lt;a href=&quot;#分析&quot; class=&quot;headerlink&quot; title=&quot;分析&quot;&gt;&lt;/a&gt;分析&lt;/h3&gt;&lt;p&gt;设所求连续基数为$i, i+2, …, i+2k$，则等差数列求和得$(i+k)(k+1)$&lt;br&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;math.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;memory.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;define&lt;/span&gt; MAXN	1000000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i, k, SUM_, gen;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	SUM_ = &lt;span class=&quot;built_in&quot;&gt;pow&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;111&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	gen = &lt;span class=&quot;built_in&quot;&gt;sqrt&lt;/span&gt;(SUM_);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;lt; gen; i+=&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(k = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; k &amp;lt; gen; k++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;((i+k) * (k+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) == SUM_)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d\n&quot;&lt;/span&gt;, i);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;答案&quot;&gt;&lt;a href=&quot;#答案&quot; class=&quot;headerlink&quot; title=&quot;答案&quot;&gt;&lt;/a&gt;答案&lt;/h3&gt;&lt;p&gt;371&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -407,11 +412,11 @@
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数独" scheme="http://yoursite.com/tags/%E6%95%B0%E7%8B%AC/"/>
     
       <category term="回溯" scheme="http://yoursite.com/tags/%E5%9B%9E%E6%BA%AF/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
