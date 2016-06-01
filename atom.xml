@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-01T16:29:57.144Z</updated>
+  <updated>2016-06-01T16:33:39.356Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/"/>
     <id>http://yoursite.com/2016/06/第四届蓝桥杯题解/</id>
     <published>2016-06-01T13:27:30.000Z</published>
-    <updated>2016-06-01T16:29:57.144Z</updated>
+    <updated>2016-06-01T16:33:39.356Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第四届蓝桥杯题解汇总&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -34,6 +34,10 @@
 &lt;tr&gt;
 &lt;td&gt;结果填空&lt;/td&gt;
 &lt;td&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E7%8C%9C%E7%81%AF%E8%B0%9C/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;猜灯谜&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;结果填空&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E8%BF%9E%E7%BB%AD%E5%A5%87%E6%95%B0%E5%92%8C/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连续奇数和&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
