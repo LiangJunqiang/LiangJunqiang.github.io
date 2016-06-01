@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-01T16:33:39.356Z</updated>
+  <updated>2016-06-01T16:38:10.285Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/"/>
     <id>http://yoursite.com/2016/06/第四届蓝桥杯题解/</id>
     <published>2016-06-01T13:27:30.000Z</published>
-    <updated>2016-06-01T16:33:39.356Z</updated>
+    <updated>2016-06-01T16:38:10.285Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第四届蓝桥杯题解汇总&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -61,7 +61,7 @@
     <link href="http://yoursite.com/2016/06/%E8%BF%9E%E7%BB%AD%E5%A5%87%E6%95%B0%E5%92%8C/"/>
     <id>http://yoursite.com/2016/06/连续奇数和/</id>
     <published>2016-06-01T13:06:39.000Z</published>
-    <updated>2016-06-01T16:32:05.299Z</updated>
+    <updated>2016-06-01T16:38:09.471Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第四届蓝桥杯题解汇总&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h3&gt;&lt;p&gt;小明看到一本书上写着：任何数字的立方都可以表示为连续奇数的和。&lt;br&gt;比如：&lt;br&gt;2^3 = 8 = 3 + 5&lt;br&gt;3^3 = 27 = 7 + 9 + 11&lt;br&gt;4^3 = 64 = 1 + 3 + … + 15&lt;br&gt;虽然他没有想出怎么证明，但他想通过计算机进行验证。&lt;/p&gt;
@@ -87,11 +87,41 @@
   </entry>
   
   <entry>
+    <title>连续奇数和</title>
+    <link href="http://yoursite.com/2016/06/%E7%A9%BA%E7%99%BD%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
+    <id>http://yoursite.com/2016/06/空白格式化/</id>
+    <published>2016-06-01T13:06:39.000Z</published>
+    <updated>2016-06-01T16:38:05.218Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第四届蓝桥杯题解汇总&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h3&gt;&lt;p&gt;本次大赛采用了全自动机器测评系统。&lt;br&gt;如果你的答案与标准答案相差了一个空格，很可能无法得分，所以要加倍谨慎！&lt;/p&gt;
+&lt;p&gt;但也不必过于惊慌。因为在有些情况下，测评系统会把你的答案进行“空白格式化”。其具体做法是：去掉所有首尾空白；中间的多个空白替换为一个空格。所谓空白指的是：空格、制表符、回车符。&lt;br&gt;以下代码实现了这个功能。仔细阅读代码，填写缺失的部分。&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt;* from, &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt;* to)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt;* p_from = from;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt;* p_to = to;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(*p_from==&lt;span class=&quot;string&quot;&gt;&#39; &#39;&lt;/span&gt; || *p_from==&lt;span class=&quot;string&quot;&gt;&#39;\t&#39;&lt;/span&gt; || *p_from==&lt;span class=&quot;string&quot;&gt;&#39;\n&#39;&lt;/span&gt;) p_from++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;do&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(*p_from==&lt;span class=&quot;string&quot;&gt;&#39; &#39;&lt;/span&gt; || *p_from==&lt;span class=&quot;string&quot;&gt;&#39;\t&#39;&lt;/span&gt; || *p_from==&lt;span class=&quot;string&quot;&gt;&#39;\n&#39;&lt;/span&gt;)&amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;do&lt;/span&gt;&amp;#123;p_from++;&amp;#125; &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(*p_from==&lt;span class=&quot;string&quot;&gt;&#39; &#39;&lt;/span&gt; || *p_from==&lt;span class=&quot;string&quot;&gt;&#39;\t&#39;&lt;/span&gt; || *p_from==&lt;span class=&quot;string&quot;&gt;&#39;\n&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(____________________) *p_to++ = &lt;span class=&quot;string&quot;&gt;&#39; &#39;&lt;/span&gt;;  &lt;span class=&quot;comment&quot;&gt;//填空位置&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(*p_to++ = *p_from++);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;请分析代码逻辑，并推测划线处的代码，通过网页提交。&lt;br&gt;注意：仅把缺少的代码作为答案，千万不要填写多余的代码、符号或说明文字！！&lt;/p&gt;
+&lt;h3 id=&quot;分析&quot;&gt;&lt;a href=&quot;#分析&quot; class=&quot;headerlink&quot; title=&quot;分析&quot;&gt;&lt;/a&gt;分析&lt;/h3&gt;&lt;p&gt;关键是“去掉所有首尾空白；中间的多个空白替换为一个空格”这句话和&lt;code&gt;*p_to++ = &amp;#39; &amp;#39;;&lt;/code&gt;这个语句，那么判断条件就是“刚经过的空白后面不是字符串的结束”&lt;/p&gt;
+&lt;h3 id=&quot;答案&quot;&gt;&lt;a href=&quot;#答案&quot; class=&quot;headerlink&quot; title=&quot;答案&quot;&gt;&lt;/a&gt;答案&lt;/h3&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;*p_from!=&lt;span class=&quot;string&quot;&gt;&#39;\0&#39;&lt;/span&gt;   &lt;span class=&quot;comment&quot;&gt;//参考答案为*p_from&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/&quot;&gt;第四届蓝桥杯题解汇总&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="蓝桥杯" scheme="http://yoursite.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+      <category term="代码填空" scheme="http://yoursite.com/tags/%E4%BB%A3%E7%A0%81%E5%A1%AB%E7%A9%BA/"/>
+    
+      <category term="第四届蓝桥杯" scheme="http://yoursite.com/tags/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>猜灯谜</title>
     <link href="http://yoursite.com/2016/06/%E7%8C%9C%E7%81%AF%E8%B0%9C/"/>
     <id>http://yoursite.com/2016/06/猜灯谜/</id>
     <published>2016-06-01T13:06:38.000Z</published>
-    <updated>2016-06-01T16:29:55.449Z</updated>
+    <updated>2016-06-01T16:38:11.302Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第四届蓝桥杯题解汇总&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;结果填空 (满分5分)&lt;/p&gt;
 &lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h3&gt;&lt;p&gt;A 村的元宵节灯会上有一迷题：&lt;/p&gt;
