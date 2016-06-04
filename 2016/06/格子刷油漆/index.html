@@ -38,7 +38,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="蓝桥杯,第四届蓝桥杯,结果填空," />
+  <meta name="keywords" content="蓝桥杯,编程题,第四届蓝桥杯," />
 
 
 
@@ -58,13 +58,13 @@
 
 <meta name="description" content="第四届蓝桥杯题解汇总">
 <meta property="og:type" content="article">
-<meta property="og:title" content="连续奇数和">
-<meta property="og:url" content="http://yoursite.com/2016/06/连续奇数和/index.html">
+<meta property="og:title" content="格子刷油漆">
+<meta property="og:url" content="http://yoursite.com/2016/06/格子刷油漆/index.html">
 <meta property="og:site_name" content="LiangJun's Notes">
 <meta property="og:description" content="第四届蓝桥杯题解汇总">
-<meta property="og:updated_time" content="2016-06-01T16:38:09.471Z">
+<meta property="og:updated_time" content="2016-06-04T07:52:38.789Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="连续奇数和">
+<meta name="twitter:title" content="格子刷油漆">
 <meta name="twitter:description" content="第四届蓝桥杯题解汇总">
 
 
@@ -83,7 +83,7 @@
   };
 </script>
 
-  <title> 连续奇数和 | LiangJun's Notes </title>
+  <title> 格子刷油漆 | LiangJun's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -232,7 +232,7 @@
             
             
               
-                连续奇数和
+                格子刷油漆
               
             
           </h1>
@@ -244,7 +244,7 @@
               <i class="fa fa-calendar"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-01T21:06:39+08:00" content="2016-06-01">
+            <time itemprop="dateCreated" datetime="2016-06-01T21:13:30+08:00" content="2016-06-01">
               2016-06-01
             </time>
           </span>
@@ -258,8 +258,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/06/连续奇数和/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/连续奇数和/" itemprop="commentsCount"></span>
+                <a href="/2016/06/格子刷油漆/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/格子刷油漆/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -283,11 +283,23 @@
 
       
         <p><strong><a href="http://liangjunqiang.top/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/" target="_blank" rel="external">第四届蓝桥杯题解汇总</a></strong><br><a id="more"></a></p>
-<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>小明看到一本书上写着：任何数字的立方都可以表示为连续奇数的和。<br>比如：<br>2^3 = 8 = 3 + 5<br>3^3 = 27 = 7 + 9 + 11<br>4^3 = 64 = 1 + 3 + … + 15<br>虽然他没有想出怎么证明，但他想通过计算机进行验证。</p>
-<p>请你帮助小明写出 111的立方之连续奇数和表示法的起始数字。如果有多个表示方案，选择起始数字小的方案。        </p>
-<p>请严格按照要求，通过浏览器提交答案。<br>注意：只提交一个整数，不要写其它附加内容，比如：说明性的文字。</p>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>设所求连续基数为$i, i+2, …, i+2k$，则等差数列求和得$(i+k)(k+1)$<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXN	1000000</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;	</span><br><span class="line">	<span class="keyword">int</span> i, k, SUM_, gen;</span><br><span class="line">	SUM_ = <span class="built_in">pow</span>(<span class="number">111</span>, <span class="number">3</span>);</span><br><span class="line">	gen = <span class="built_in">sqrt</span>(SUM_);</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">1</span>; i &lt; gen; i+=<span class="number">2</span>)</span><br><span class="line">		<span class="keyword">for</span>(k = <span class="number">1</span>; k &lt; gen; k++)</span><br><span class="line">			<span class="keyword">if</span>((i+k) * (k+<span class="number">1</span>) == SUM_)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, i);</span><br><span class="line">				<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h3><p>371</p>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>X国的一段古城墙的顶端可以看成 2*N个格子组成的矩形（如图1所示），现需要把这些格子刷上保护漆。</p>
+<p>你可以从任意一个格子刷起，刷完一格，可以移动到和它相邻的格子（对角相邻也算数），但不能移动到较远的格子（因为油漆未干不能踩！）</p>
+<p>比如：a d b c e f 就是合格的刷漆顺序。</p>
+<p>c e f d a b 是另一种合适的方案。</p>
+<p>当已知 N 时，求总的方案数。当N较大时，结果会迅速增大，请把结果对 1000000007 (十亿零七) 取模。</p>
+<p>输入数据为一个正整数（不大于1000）<br>输出数据为一个正整数。</p>
+<p>例如：<br>用户输入：<br>2<br>程序应该输出：<br>24</p>
+<p>再例如：<br>用户输入：<br>3<br>程序应该输出：<br>96</p>
+<p>再例如：<br>用户输入：<br>22<br>程序应该输出：<br>359635897</p>
+<p>资源约定：<br>峰值内存消耗 &lt; 64M<br>CPU消耗  &lt; 1000ms</p>
+<p>请严格按要求输出，不要画蛇添足地打印类似：“请您输入…” 的多余内容。</p>
+<p>所有代码放在同一个源文件中，调试通过后，拷贝提交该源码。</p>
+<p>注意: main函数需要返回0<br>注意: 只使用ANSI C/ANSI C++ 标准，不要调用依赖于编译环境或操作系统的特殊函数。<br>注意: 所有依赖的函数必须明确地在源文件中 #include <xxx>， 不能通过工程设置而省略常用头文件。</xxx></p>
+<p>提交时，注意选择所期望的编译器类型(千万不要混淆c和cpp)。</p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>先定义几个概念，便于分析：<br><em>相对格子：</em> 对于某个格子，同一列的另一个格子<br><em>走法B：</em> 从四个角的某一个角起，遍历所有的格子后回到相对格子。这就要求往返的“往”过程中每列只能选择其中的一个刷，因此n列格子按此方法有$2^{n-1}$种走法。<br><em>走法A：</em> 从四个角的某一个角起，遍历所有的格子，不一定回到相对格子，这里可分为三种基本情况：<br>①对于一些列，一列一列地走，每列有两种走法，比如前k列按①走而剩下的n-k列按A走，则走法数为$2^{k}a<em>{n-k}$<br>②对于一些列，两列两列地走，那么就要求两列中的起点必须在前一列，终点必须在后一列，这样才可以走后面的n-2列。在这两列中，起点有两个选择，对于某个起点，又有两种走法。因此，前两列按②走，后n-2列按A走，有$4a</em>{n-2}$种走法。<br>③按B走。<br>综上，n列按走法A的情况有：$a<em>n=2a</em>{n-1}+4a_{n-2}+b_n$</p>
+<p>我们再来按开始位置分情况讨论，对于四个角中的每一个角，走法数必定为$a_n$<br>对于其它的某一列$i(2&lt;=i&lt;=n-1)$，必定是从i这一列开始任意遍历一边，回到相对格子，再按A走法走完另一边（AB的开始位置各有两种选择，且开始列必须由走法B走），得走法：<br>$$4b<em>ia</em>{n-i}+4b<em>{n-i+1}a</em>{i-1}$$<br>再考虑各列作为起点，用sum累加得结果。</p>
+<h3 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MOD	1000000007</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX	1003</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> a[MAX], b[MAX], sum;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n, i;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	b[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">2</span>; i &lt;= n; i++)</span><br><span class="line">		b[i] = (b[i - <span class="number">1</span>] * <span class="number">2</span>) % MOD;</span><br><span class="line">	a[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">	a[<span class="number">2</span>] = <span class="number">6</span>;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">3</span>; i &lt;= n; i++)</span><br><span class="line">		a[i] = ((<span class="number">2</span> * a[i - <span class="number">1</span>]) % MOD + (<span class="number">4</span> * a[i - <span class="number">2</span>]) % MOD + b[i]) % MOD;</span><br><span class="line">	sum = <span class="number">4</span> * a[n];</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">2</span>; i &lt; n; i++)&#123;</span><br><span class="line">		sum += ((<span class="number">4</span>*b[i]*a[n - i])%MOD + (<span class="number">4</span>*b[n-i+<span class="number">1</span>]*a[i<span class="number">-1</span>])%MOD)%MOD;</span><br><span class="line">		sum %= MOD;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, sum);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -331,9 +343,9 @@
           
             <a href="/tags/蓝桥杯/" rel="tag">#蓝桥杯</a>
           
-            <a href="/tags/第四届蓝桥杯/" rel="tag">#第四届蓝桥杯</a>
+            <a href="/tags/编程题/" rel="tag">#编程题</a>
           
-            <a href="/tags/结果填空/" rel="tag">#结果填空</a>
+            <a href="/tags/第四届蓝桥杯/" rel="tag">#第四届蓝桥杯</a>
           
         </div>
       
@@ -342,16 +354,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/猜灯谜/" rel="next" title="猜灯谜">
-                <i class="fa fa-chevron-left"></i> 猜灯谜
+              <a href="/2016/06/农场阳光/" rel="next" title="农场阳光">
+                <i class="fa fa-chevron-left"></i> 农场阳光
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/空白格式化/" rel="prev" title="空白格式化">
-                空白格式化 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/06/第四届蓝桥杯题解/" rel="prev" title="第四届蓝桥杯题解">
+                第四届蓝桥杯题解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -367,10 +379,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/06/连续奇数和/"
-     data-title="连续奇数和"
+        <div class="ds-share flat" data-thread-key="2016/06/格子刷油漆/"
+     data-title="格子刷油漆"
      data-content=""
-     data-url="http://yoursite.com/2016/06/连续奇数和/">
+     data-url="http://yoursite.com/2016/06/格子刷油漆/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -397,8 +409,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/连续奇数和/"
-           data-title="连续奇数和" data-url="http://yoursite.com/2016/06/连续奇数和/">
+      <div class="ds-thread" data-thread-key="2016/06/格子刷油漆/"
+           data-title="格子刷油漆" data-url="http://yoursite.com/2016/06/格子刷油漆/">
       </div>
     
   </div>

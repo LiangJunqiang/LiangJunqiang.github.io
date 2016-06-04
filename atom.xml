@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-01T16:51:55.672Z</updated>
+  <updated>2016-06-04T07:49:01.453Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/"/>
     <id>http://yoursite.com/2016/06/第四届蓝桥杯题解/</id>
     <published>2016-06-01T13:27:30.000Z</published>
-    <updated>2016-06-01T16:51:55.672Z</updated>
+    <updated>2016-06-04T07:49:01.453Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第四届蓝桥杯题解汇总&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -40,8 +40,16 @@
 &lt;td&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E8%BF%9E%E7%BB%AD%E5%A5%87%E6%95%B0%E5%92%8C/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;连续奇数和&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;代码填空&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E7%A9%BA%E7%99%BD%E6%A0%BC%E5%BC%8F%E5%8C%96/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;空白格式化&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;编程题&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;&quot;&gt;高僧斗法&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E9%AB%98%E5%83%A7%E6%96%97%E6%B3%95/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;高僧斗法&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;编程题&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E5%86%9C%E5%9C%BA%E9%98%B3%E5%85%89/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;农场阳光&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -55,6 +63,48 @@
     
     
       <category term="蓝桥杯" scheme="http://yoursite.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+      <category term="第四届蓝桥杯" scheme="http://yoursite.com/tags/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>格子刷油漆</title>
+    <link href="http://yoursite.com/2016/06/%E6%A0%BC%E5%AD%90%E5%88%B7%E6%B2%B9%E6%BC%86/"/>
+    <id>http://yoursite.com/2016/06/格子刷油漆/</id>
+    <published>2016-06-01T13:13:30.000Z</published>
+    <updated>2016-06-04T07:52:38.789Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第四届蓝桥杯题解汇总&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h3&gt;&lt;p&gt;X国的一段古城墙的顶端可以看成 2*N个格子组成的矩形（如图1所示），现需要把这些格子刷上保护漆。&lt;/p&gt;
+&lt;p&gt;你可以从任意一个格子刷起，刷完一格，可以移动到和它相邻的格子（对角相邻也算数），但不能移动到较远的格子（因为油漆未干不能踩！）&lt;/p&gt;
+&lt;p&gt;比如：a d b c e f 就是合格的刷漆顺序。&lt;/p&gt;
+&lt;p&gt;c e f d a b 是另一种合适的方案。&lt;/p&gt;
+&lt;p&gt;当已知 N 时，求总的方案数。当N较大时，结果会迅速增大，请把结果对 1000000007 (十亿零七) 取模。&lt;/p&gt;
+&lt;p&gt;输入数据为一个正整数（不大于1000）&lt;br&gt;输出数据为一个正整数。&lt;/p&gt;
+&lt;p&gt;例如：&lt;br&gt;用户输入：&lt;br&gt;2&lt;br&gt;程序应该输出：&lt;br&gt;24&lt;/p&gt;
+&lt;p&gt;再例如：&lt;br&gt;用户输入：&lt;br&gt;3&lt;br&gt;程序应该输出：&lt;br&gt;96&lt;/p&gt;
+&lt;p&gt;再例如：&lt;br&gt;用户输入：&lt;br&gt;22&lt;br&gt;程序应该输出：&lt;br&gt;359635897&lt;/p&gt;
+&lt;p&gt;资源约定：&lt;br&gt;峰值内存消耗 &amp;lt; 64M&lt;br&gt;CPU消耗  &amp;lt; 1000ms&lt;/p&gt;
+&lt;p&gt;请严格按要求输出，不要画蛇添足地打印类似：“请您输入…” 的多余内容。&lt;/p&gt;
+&lt;p&gt;所有代码放在同一个源文件中，调试通过后，拷贝提交该源码。&lt;/p&gt;
+&lt;p&gt;注意: main函数需要返回0&lt;br&gt;注意: 只使用ANSI C/ANSI C++ 标准，不要调用依赖于编译环境或操作系统的特殊函数。&lt;br&gt;注意: 所有依赖的函数必须明确地在源文件中 #include &lt;xxx&gt;， 不能通过工程设置而省略常用头文件。&lt;/xxx&gt;&lt;/p&gt;
+&lt;p&gt;提交时，注意选择所期望的编译器类型(千万不要混淆c和cpp)。&lt;/p&gt;
+&lt;h3 id=&quot;分析&quot;&gt;&lt;a href=&quot;#分析&quot; class=&quot;headerlink&quot; title=&quot;分析&quot;&gt;&lt;/a&gt;分析&lt;/h3&gt;&lt;p&gt;先定义几个概念，便于分析：&lt;br&gt;&lt;em&gt;相对格子：&lt;/em&gt; 对于某个格子，同一列的另一个格子&lt;br&gt;&lt;em&gt;走法B：&lt;/em&gt; 从四个角的某一个角起，遍历所有的格子后回到相对格子。这就要求往返的“往”过程中每列只能选择其中的一个刷，因此n列格子按此方法有$2^{n-1}$种走法。&lt;br&gt;&lt;em&gt;走法A：&lt;/em&gt; 从四个角的某一个角起，遍历所有的格子，不一定回到相对格子，这里可分为三种基本情况：&lt;br&gt;①对于一些列，一列一列地走，每列有两种走法，比如前k列按①走而剩下的n-k列按A走，则走法数为$2^{k}a&lt;em&gt;{n-k}$&lt;br&gt;②对于一些列，两列两列地走，那么就要求两列中的起点必须在前一列，终点必须在后一列，这样才可以走后面的n-2列。在这两列中，起点有两个选择，对于某个起点，又有两种走法。因此，前两列按②走，后n-2列按A走，有$4a&lt;/em&gt;{n-2}$种走法。&lt;br&gt;③按B走。&lt;br&gt;综上，n列按走法A的情况有：$a&lt;em&gt;n=2a&lt;/em&gt;{n-1}+4a_{n-2}+b_n$&lt;/p&gt;
+&lt;p&gt;我们再来按开始位置分情况讨论，对于四个角中的每一个角，走法数必定为$a_n$&lt;br&gt;对于其它的某一列$i(2&amp;lt;=i&amp;lt;=n-1)$，必定是从i这一列开始任意遍历一边，回到相对格子，再按A走法走完另一边（AB的开始位置各有两种选择，且开始列必须由走法B走），得走法：&lt;br&gt;$$4b&lt;em&gt;ia&lt;/em&gt;{n-i}+4b&lt;em&gt;{n-i+1}a&lt;/em&gt;{i-1}$$&lt;br&gt;再考虑各列作为起点，用sum累加得结果。&lt;/p&gt;
+&lt;h3 id=&quot;答案&quot;&gt;&lt;a href=&quot;#答案&quot; class=&quot;headerlink&quot; title=&quot;答案&quot;&gt;&lt;/a&gt;答案&lt;/h3&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;define&lt;/span&gt; MOD	1000000007&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;define&lt;/span&gt; MAX	1003&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; a[MAX], b[MAX], sum;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n, i;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;scanf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;, &amp;amp;n);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	b[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(i = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;; i &amp;lt;= n; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		b[i] = (b[i - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] * &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) % MOD;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	a[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	a[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;] = &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(i = &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;; i &amp;lt;= n; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		a[i] = ((&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; * a[i - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]) % MOD + (&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt; * a[i - &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;]) % MOD + b[i]) % MOD;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	sum = &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt; * a[n];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(i = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;; i &amp;lt; n; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		sum += ((&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;*b[i]*a[n - i])%MOD + (&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;*b[n-i+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]*a[i&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;])%MOD)%MOD;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		sum %= MOD;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d\n&quot;&lt;/span&gt;, sum);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://liangjunqiang.top/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/&quot;&gt;第四届蓝桥杯题解汇总&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="蓝桥杯" scheme="http://yoursite.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+      <category term="编程题" scheme="http://yoursite.com/tags/%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
     
       <category term="第四届蓝桥杯" scheme="http://yoursite.com/tags/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
     
