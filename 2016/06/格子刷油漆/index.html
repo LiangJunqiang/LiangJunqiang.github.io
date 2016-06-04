@@ -38,7 +38,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="蓝桥杯,编程题,第四届蓝桥杯," />
+  <meta name="keywords" content="蓝桥杯,第四届蓝桥杯,编程题," />
 
 
 
@@ -62,10 +62,14 @@
 <meta property="og:url" content="http://yoursite.com/2016/06/格子刷油漆/index.html">
 <meta property="og:site_name" content="LiangJun's Notes">
 <meta property="og:description" content="第四届蓝桥杯题解汇总">
-<meta property="og:updated_time" content="2016-06-04T08:08:55.630Z">
+<meta property="og:image" content="http://7xssq8.com1.z0.glb.clouddn.com/45.png">
+<meta property="og:image" content="http://chart.googleapis.com/chart?cht=tx&chl=a_{n} = 2a_{n-1} + 4a_{n-2} + b_{n}">
+<meta property="og:image" content="http://chart.googleapis.com/chart?cht=tx&chl=4b_{i}a_{n-i}+4b_{n-i+1}a_{i-1}">
+<meta property="og:updated_time" content="2016-06-04T08:21:52.444Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="格子刷油漆">
 <meta name="twitter:description" content="第四届蓝桥杯题解汇总">
+<meta name="twitter:image" content="http://7xssq8.com1.z0.glb.clouddn.com/45.png">
 
 
 
@@ -283,8 +287,7 @@
 
       
         <p><strong><a href="http://liangjunqiang.top/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/" target="_blank" rel="external">第四届蓝桥杯题解汇总</a></strong><br><a id="more"></a></p>
-<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>X国的一段古城墙的顶端可以看成 2*N个格子组成的矩形（如图1所示），现需要把这些格子刷上保护漆。</p>
-<p>你可以从任意一个格子刷起，刷完一格，可以移动到和它相邻的格子（对角相邻也算数），但不能移动到较远的格子（因为油漆未干不能踩！）</p>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>X国的一段古城墙的顶端可以看成 2*N个格子组成的矩形（如<a href="http://7xssq8.com1.z0.glb.clouddn.com/45.png" target="_blank" rel="external">图1</a>所示），现需要把这些格子刷上保护漆。<br><img src="http://7xssq8.com1.z0.glb.clouddn.com/45.png" alt="图1"><br>你可以从任意一个格子刷起，刷完一格，可以移动到和它相邻的格子（对角相邻也算数），但不能移动到较远的格子（因为油漆未干不能踩！）</p>
 <p>比如：a d b c e f 就是合格的刷漆顺序。</p>
 <p>c e f d a b 是另一种合适的方案。</p>
 <p>当已知 N 时，求总的方案数。当N较大时，结果会迅速增大，请把结果对 1000000007 (十亿零七) 取模。</p>
@@ -304,9 +307,9 @@
 <p>①对于一些列，一列一列地走，每列有两种走法，比如前k列按①走而剩下的n-k列按A走，则走法数为$2^{k}a_{n-k}$</p>
 <p>②对于一些列，两列两列地走，那么就要求两列中的起点必须在前一列，终点必须在后一列，这样才可以走后面的n-2列。在这两列中，起点有两个选择，对于某个起点，又有两种走法。因此，前两列按②走，后n-2列按A走，有$4a_{n-2}$种走法。</p>
 <p>③按B走。</p>
-<p>综上，n列按走法A的情况有：$a_{n}$</p>
+<p>综上，n列按走法A的情况有：<img src="http://chart.googleapis.com/chart?cht=tx&chl=a_{n} = 2a_{n-1} + 4a_{n-2} + b_{n}" style="border:none;"></p>
 <p>我们再来按开始位置分情况讨论，对于四个角中的每一个角，走法数必定为$a_{n}$</p>
-<p>对于其它的某一列$i(2&lt;=i&lt;=n-1)$，必定是从i这一列开始任意遍历一边，回到相对格子，再按A走法走完另一边（AB的开始位置各有两种选择，且开始列必须由走法B走），得走法：<br>$$4b<em>{i}a</em>{n-i}+4b<em>{n-i+1}a</em>{i-1}$$</p>
+<p>对于其它的某一列$i(2&lt;=i&lt;=n-1)$，必定是从i这一列开始任意遍历一边，回到相对格子，再按A走法走完另一边（AB的开始位置各有两种选择，且开始列必须由走法B走），得走法：<br><img src="http://chart.googleapis.com/chart?cht=tx&chl=4b_{i}a_{n-i}+4b_{n-i+1}a_{i-1}" style="border:none;"></p>
 <p>再考虑各列作为起点，用sum累加得结果。</p>
 <h3 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MOD	1000000007</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX	1003</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> a[MAX], b[MAX], sum;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n, i;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	b[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">2</span>; i &lt;= n; i++)</span><br><span class="line">		b[i] = (b[i - <span class="number">1</span>] * <span class="number">2</span>) % MOD;</span><br><span class="line">	a[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">	a[<span class="number">2</span>] = <span class="number">6</span>;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">3</span>; i &lt;= n; i++)</span><br><span class="line">		a[i] = ((<span class="number">2</span> * a[i - <span class="number">1</span>]) % MOD + (<span class="number">4</span> * a[i - <span class="number">2</span>]) % MOD + b[i]) % MOD;</span><br><span class="line">	sum = <span class="number">4</span> * a[n];</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">2</span>; i &lt; n; i++)&#123;</span><br><span class="line">		sum += ((<span class="number">4</span>*b[i]*a[n - i])%MOD + (<span class="number">4</span>*b[n-i+<span class="number">1</span>]*a[i<span class="number">-1</span>])%MOD)%MOD;</span><br><span class="line">		sum %= MOD;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, sum);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -352,9 +355,9 @@
           
             <a href="/tags/蓝桥杯/" rel="tag">#蓝桥杯</a>
           
-            <a href="/tags/编程题/" rel="tag">#编程题</a>
-          
             <a href="/tags/第四届蓝桥杯/" rel="tag">#第四届蓝桥杯</a>
+          
+            <a href="/tags/编程题/" rel="tag">#编程题</a>
           
         </div>
       
