@@ -38,7 +38,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="蓝桥杯,第四届蓝桥杯," />
+  <meta name="keywords" content="蓝桥杯,Nim博弈," />
 
 
 
@@ -56,16 +56,19 @@
 
 
 
-<meta name="description" content="第四届蓝桥杯题解汇总">
+<meta name="description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第四届蓝桥杯题解">
+<meta property="og:title" content="第四届蓝桥杯C/C++ B组决赛题解">
 <meta property="og:url" content="http://yoursite.com/2016/06/第四届蓝桥杯题解/index.html">
 <meta property="og:site_name" content="LiangJun's Notes">
-<meta property="og:description" content="第四届蓝桥杯题解汇总">
-<meta property="og:updated_time" content="2016-06-04T07:55:44.574Z">
+<meta property="og:description">
+<meta property="og:image" content="http://7xssq8.com1.z0.glb.clouddn.com/disijie%20%281%29.png">
+<meta property="og:image" content="http://7xssq8.com1.z0.glb.clouddn.com/%E5%9B%BE1.jpg">
+<meta property="og:updated_time" content="2016-06-24T14:20:08.998Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第四届蓝桥杯题解">
-<meta name="twitter:description" content="第四届蓝桥杯题解汇总">
+<meta name="twitter:title" content="第四届蓝桥杯C/C++ B组决赛题解">
+<meta name="twitter:description">
+<meta name="twitter:image" content="http://7xssq8.com1.z0.glb.clouddn.com/disijie%20%281%29.png">
 
 
 
@@ -83,7 +86,7 @@
   };
 </script>
 
-  <title> 第四届蓝桥杯题解 | LiangJun's Notes </title>
+  <title> 第四届蓝桥杯C/C++ B组决赛题解 | LiangJun's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -232,7 +235,7 @@
             
             
               
-                第四届蓝桥杯题解
+                第四届蓝桥杯C/C++ B组决赛题解
               
             
           </h1>
@@ -282,41 +285,86 @@
       
 
       
-        <p><strong><a href="http://liangjunqiang.top/2016/06/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E9%A2%98%E8%A7%A3/" target="_blank" rel="external">第四届蓝桥杯题解汇总</a></strong><br><a id="more"></a></p>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>题目名称</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>结果填空</td>
-<td><a href="http://liangjunqiang.top/2016/06/%E7%8C%9C%E7%81%AF%E8%B0%9C/" target="_blank" rel="external">猜灯谜</a></td>
-</tr>
-<tr>
-<td>结果填空</td>
-<td><a href="http://liangjunqiang.top/2016/06/%E8%BF%9E%E7%BB%AD%E5%A5%87%E6%95%B0%E5%92%8C/" target="_blank" rel="external">连续奇数和</a></td>
-</tr>
-<tr>
-<td>代码填空</td>
-<td><a href="http://liangjunqiang.top/2016/06/%E7%A9%BA%E7%99%BD%E6%A0%BC%E5%BC%8F%E5%8C%96/" target="_blank" rel="external">空白格式化</a></td>
-</tr>
-<tr>
-<td>编程题</td>
-<td><a href="http://liangjunqiang.top/2016/06/%E9%AB%98%E5%83%A7%E6%96%97%E6%B3%95/" target="_blank" rel="external">高僧斗法</a></td>
-</tr>
-<tr>
-<td>编程题</td>
-<td><a href="http://liangjunqiang.top/2016/06/%E6%A0%BC%E5%AD%90%E5%88%B7%E6%B2%B9%E6%BC%86/" target="_blank" rel="external">格子刷油漆</a></td>
-</tr>
-<tr>
-<td>编程题</td>
-<td><a href="http://liangjunqiang.top/2016/06/%E5%86%9C%E5%9C%BA%E9%98%B3%E5%85%89/" target="_blank" rel="external">农场阳光</a></td>
-</tr>
-</tbody>
-</table>
+        <p><img src="http://7xssq8.com1.z0.glb.clouddn.com/disijie%20%281%29.png" alt="第四届蓝桥杯C/C++ B组决赛题解汇总"><br><a id="more"></a></p>
+<h1 id="试题"><a href="#试题" class="headerlink" title="试题"></a>试题</h1><h2 id="第一题-猜灯谜"><a href="#第一题-猜灯谜" class="headerlink" title="第一题 猜灯谜"></a><strong>第一题 猜灯谜</strong></h2><p>A 村的元宵节灯会上有一迷题：</p>
+<p>请猜谜 * 请猜谜 = 请边赏灯边猜</p>
+<p>小明想，一定是每个汉字代表一个数字，不同的汉字代表不同的数字。</p>
+<p>请你用计算机按小明的思路算一下，然后提交“请猜谜”三个字所代表的整数即可。</p>
+<p>请严格按照格式，通过浏览器提交答案。<br>注意：只提交一个3位的整数，不要写其它附加内容，比如：说明性的文字。</p>
+<h2 id="第二题-连续奇数和"><a href="#第二题-连续奇数和" class="headerlink" title="第二题 连续奇数和"></a><strong>第二题 连续奇数和</strong></h2><p>小明看到一本书上写着：任何数字的立方都可以表示为连续奇数的和。<br>比如：<br>2^3 = 8 = 3 + 5<br>3^3 = 27 = 7 + 9 + 11<br>4^3 = 64 = 1 + 3 + … + 15<br>虽然他没有想出怎么证明，但他想通过计算机进行验证。</p>
+<p>请你帮助小明写出 111的立方之连续奇数和表示法的起始数字。如果有多个表示方案，选择起始数字小的方案。        </p>
+<p>请严格按照要求，通过浏览器提交答案。<br>注意：只提交一个整数，不要写其它附加内容，比如：说明性的文字。</p>
+<h2 id="第三题-空白格式化"><a href="#第三题-空白格式化" class="headerlink" title="第三题 空白格式化"></a><strong>第三题 空白格式化</strong></h2><p>本次大赛采用了全自动机器测评系统。<br>如果你的答案与标准答案相差了一个空格，很可能无法得分，所以要加倍谨慎！</p>
+<p>但也不必过于惊慌。因为在有些情况下，测评系统会把你的答案进行“空白格式化”。其具体做法是：去掉所有首尾空白；中间的多个空白替换为一个空格。所谓空白指的是：空格、制表符、回车符。<br>以下代码实现了这个功能。仔细阅读代码，填写缺失的部分。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">char</span>* from, <span class="keyword">char</span>* to)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span>* p_from = from;</span><br><span class="line">	<span class="keyword">char</span>* p_to = to;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span>(*p_from==<span class="string">' '</span> || *p_from==<span class="string">'\t'</span> || *p_from==<span class="string">'\n'</span>) p_from++;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">do</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(*p_from==<span class="string">' '</span> || *p_from==<span class="string">'\t'</span> || *p_from==<span class="string">'\n'</span>)&#123; </span><br><span class="line">			<span class="keyword">do</span>&#123;p_from++;&#125; <span class="keyword">while</span>(*p_from==<span class="string">' '</span> || *p_from==<span class="string">'\t'</span> || *p_from==<span class="string">'\n'</span>);</span><br><span class="line">			<span class="keyword">if</span>(____________________) *p_to++ = <span class="string">' '</span>;  <span class="comment">//填空位置</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;<span class="keyword">while</span>(*p_to++ = *p_from++);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>请分析代码逻辑，并推测划线处的代码，通过网页提交。<br>注意：仅把缺少的代码作为答案，千万不要填写多余的代码、符号或说明文字！！</p>
+<h2 id="第四题-高僧斗法"><a href="#第四题-高僧斗法" class="headerlink" title="第四题 高僧斗法"></a><strong>第四题 高僧斗法</strong></h2><p>古时丧葬活动中经常请高僧做法事。仪式结束后，有时会有“高僧斗法”的趣味节目，以舒缓压抑的气氛。</p>
+<p>节目大略步骤为：先用粮食（一般是稻米）在地上“画”出若干级台阶（表示N级浮屠）。又有若干小和尚随机地“站”在某个台阶上。最高一级台阶必须站人，其它任意。(如图1所示)</p>
+<p>两位参加游戏的法师分别指挥某个小和尚向上走任意多级的台阶，但会被站在高级台阶上的小和尚阻挡，不能越过。两个小和尚也不能站在同一台阶，也不能向低级台阶移动。</p>
+<p>两法师轮流发出指令，最后所有小和尚必然会都挤在高段台阶，再也不能向上移动。轮到哪个法师指挥时无法继续移动，则游戏结束，该法师认输。<br><img src="http://7xssq8.com1.z0.glb.clouddn.com/%E5%9B%BE1.jpg" alt=""><br>对于已知的台阶数和小和尚的分布位置，请你计算先发指令的法师该如何决策才能保证胜出。</p>
+<p>输入数据为一行用空格分开的N个整数，表示小和尚的位置。台阶序号从1算起，所以最后一个小和尚的位置即是台阶的总数。（N&lt;100, 台阶总数&lt;1000）</p>
+<p>输出为一行用空格分开的两个整数: A B, 表示把A位置的小和尚移动到B位置。若有多个解，输出A值较小的解，若无解则输出-1。</p>
+<p>例如：<br>用户输入：<br>1 5 9<br>则程序输出：<br>1 4</p>
+<p>再如：<br>用户输入：<br>1 5 8 10<br>则程序输出：<br>1 3</p>
+<p>资源约定：<br>峰值内存消耗 &lt; 64M<br>CPU消耗  &lt; 1000ms</p>
+<p>请严格按要求输出，不要画蛇添足地打印类似：“请您输入…” 的多余内容。</p>
+<p>所有代码放在同一个源文件中，调试通过后，拷贝提交该源码。</p>
+<p>注意: main函数需要返回0<br>注意: 只使用ANSI C/ANSI C++ 标准，不要调用依赖于编译环境或操作系统的特殊函数。<br>注意: 所有依赖的函数必须明确地在源文件中 #include <xxx>， 不能通过工程设置而省略常用头文件。</xxx></p>
+<p>提交时，注意选择所期望的编译器类型(千万不要混淆c和cpp)。</p>
+<h2 id="第五题-格子刷油漆"><a href="#第五题-格子刷油漆" class="headerlink" title="第五题 格子刷油漆"></a><strong>第五题 格子刷油漆</strong></h2><p>X国的一段古城墙的顶端可以看成 2*N个格子组成的矩形（如图1所示），现需要把这些格子刷上保护漆。</p>
+<p>你可以从任意一个格子刷起，刷完一格，可以移动到和它相邻的格子（对角相邻也算数），但不能移动到较远的格子（因为油漆未干不能踩！）</p>
+<p>比如：a d b c e f 就是合格的刷漆顺序。</p>
+<p>c e f d a b 是另一种合适的方案。</p>
+<p>当已知 N 时，求总的方案数。当N较大时，结果会迅速增大，请把结果对 1000000007 (十亿零七) 取模。</p>
+<p>输入数据为一个正整数（不大于1000）<br>输出数据为一个正整数。</p>
+<p>例如：<br>用户输入：<br>2<br>程序应该输出：<br>24</p>
+<p>再例如：<br>用户输入：<br>3<br>程序应该输出：<br>96</p>
+<p>再例如：<br>用户输入：<br>22<br>程序应该输出：<br>359635897</p>
+<p>资源约定：<br>峰值内存消耗 &lt; 64M<br>CPU消耗  &lt; 1000ms</p>
+<p>请严格按要求输出，不要画蛇添足地打印类似：“请您输入…” 的多余内容。</p>
+<p>所有代码放在同一个源文件中，调试通过后，拷贝提交该源码。</p>
+<p>注意: main函数需要返回0<br>注意: 只使用ANSI C/ANSI C++ 标准，不要调用依赖于编译环境或操作系统的特殊函数。<br>注意: 所有依赖的函数必须明确地在源文件中 #include <xxx>， 不能通过工程设置而省略常用头文件。</xxx></p>
+<p>提交时，注意选择所期望的编译器类型(千万不要混淆c和cpp)。</p>
+<h2 id="第六题-农场阳光"><a href="#第六题-农场阳光" class="headerlink" title="第六题 农场阳光"></a><strong>第六题 农场阳光</strong></h2><p>X星球十分特殊，它的自转速度与公转速度相同，所以阳光总是以固定的角度照射。</p>
+<p>最近，X星球为发展星际旅游业，把空间位置出租给Y国游客来晒太阳。每个租位是漂浮在空中的圆盘形彩云（圆盘与地面平行）。当然，这会遮挡住部分阳光，被遮挡的土地植物无法生长。</p>
+<p>本题的任务是计算某个农场宜于作物生长的土地面积有多大。</p>
+<p>输入数据的第一行包含两个整数a, b，表示某农场的长和宽分别是a和b，此时，该农场的范围是由坐标(0, 0, 0), (a, 0, 0), (a, b, 0), (0, b, 0)围成的矩形区域。</p>
+<p>第二行包含一个实数g，表示阳光照射的角度。简单起见，我们假设阳光光线是垂直于农场的宽的，此时正好和农场的长的夹角是g度，此时，空间中的一点(x, y, z)在地面的投影点应该是(x + z * ctg(g度), y, 0)，其中ctg(g度)表示g度对应的余切值。</p>
+<p>第三行包含一个非负整数n，表示空中租位个数。</p>
+<p>接下来 n 行，描述每个租位。其中第i行包含4个整数xi, yi, zi, ri，表示第i个租位彩云的圆心在(xi, yi, zi)位置，圆半径为ri。</p>
+<p>要求输出一个实数，四舍五入保留两位有效数字，表示农场里能长庄稼的土地的面积。</p>
+<p>例如：<br>用户输入：<br>10 10<br>90.0<br>1<br>5 5 10 5<br>程序应该输出：<br>21.46</p>
+<p>再例如：<br>用户输入：<br>8 8<br>90.0<br>1<br>4 4 10 5<br>程序应该输出：<br>1.81</p>
+<p>样例3：<br>用户输入：<br>20 10<br>45.0<br>2<br>5 0 5 5<br>8 6 14 6<br>程序输出：<br>130.15</p>
+<p>资源约定：<br>峰值内存消耗 &lt; 64M<br>CPU消耗  &lt; 1000ms</p>
+<p>请严格按要求输出，不要画蛇添足地打印类似：“请您输入…” 的多余内容。<br>所有代码放在同一个源文件中，调试通过后，拷贝提交该源码。</p>
+<p>注意: main函数需要返回0<br>注意: 只使用ANSI C/ANSI C++ 标准，不要调用依赖于编译环境或操作系统的特殊函数。<br>注意: 所有依赖的函数必须明确地在源文件中 #include <xxx>， 不能通过工程设置而省略常用头文件。<br>提交时，注意选择所期望的编译器类型(千万不要混淆c和cpp)。</xxx></p>
+<h1 id="答案及分析"><a href="#答案及分析" class="headerlink" title="答案及分析"></a>答案及分析</h1><h2 id="第一题-猜灯谜-1"><a href="#第一题-猜灯谜-1" class="headerlink" title="第一题 猜灯谜"></a><strong>第一题 猜灯谜</strong></h2><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>把题目的条件都写上，暴力就好。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> i, j, k, rs;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">1</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">		<span class="keyword">for</span>(j = <span class="number">0</span>; j &lt; <span class="number">10</span>; j++)</span><br><span class="line">			<span class="keyword">for</span>(k = <span class="number">0</span>; k &lt; <span class="number">10</span>; k++)</span><br><span class="line">			&#123;</span><br><span class="line">				rs = i * <span class="number">100</span> + j * <span class="number">10</span> + k;</span><br><span class="line">				rs = <span class="built_in">pow</span>(rs, <span class="number">2</span>);</span><br><span class="line">				<span class="keyword">if</span>(rs / <span class="number">100000</span> == i &amp;&amp; rs % <span class="number">10</span> == j &amp;&amp; rs/<span class="number">1000</span>%<span class="number">10</span> != rs/<span class="number">100</span>%<span class="number">10</span> &amp;&amp; rs/<span class="number">10000</span>%<span class="number">10</span>==rs/<span class="number">10</span>%<span class="number">10</span> &amp;&amp; i!=j &amp;&amp; j!=k &amp;&amp; k!=i)</span><br><span class="line">					<span class="built_in">printf</span>(<span class="string">"%d%d%d\n"</span>, i, j, k);</span><br><span class="line">			&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h3><p>897</p>
+<h2 id="第二题-连续奇数和-1"><a href="#第二题-连续奇数和-1" class="headerlink" title="第二题 连续奇数和"></a><strong>第二题 连续奇数和</strong></h2><h3 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h3><p>设所求连续基数为$i, i+2, …, i+2k$，则等差数列求和得$(i+k)(k+1)$<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXN	1000000</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;	</span><br><span class="line">	<span class="keyword">int</span> i, k, SUM_, gen;</span><br><span class="line">	SUM_ = <span class="built_in">pow</span>(<span class="number">111</span>, <span class="number">3</span>);</span><br><span class="line">	gen = <span class="built_in">sqrt</span>(SUM_);</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">1</span>; i &lt; gen; i+=<span class="number">2</span>)</span><br><span class="line">		<span class="keyword">for</span>(k = <span class="number">1</span>; k &lt; gen; k++)</span><br><span class="line">			<span class="keyword">if</span>((i+k) * (k+<span class="number">1</span>) == SUM_)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, i);</span><br><span class="line">				<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="答案-1"><a href="#答案-1" class="headerlink" title="答案"></a>答案</h3><p>371</p>
+<h2 id="第三题-空白格式化-1"><a href="#第三题-空白格式化-1" class="headerlink" title="第三题 空白格式化"></a><strong>第三题 空白格式化</strong></h2><h3 id="分析-2"><a href="#分析-2" class="headerlink" title="分析"></a>分析</h3><p>关键是“去掉所有首尾空白；中间的多个空白替换为一个空格”这句话和<code>*p_to++ = &#39; &#39;;</code>这个语句，那么判断条件就是“刚经过的空白后面不是字符串的结束”</p>
+<h3 id="答案-2"><a href="#答案-2" class="headerlink" title="答案"></a>答案</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*p_from!=<span class="string">'\0'</span>   <span class="comment">//参考答案为*p_from</span></span><br></pre></td></tr></table></figure>
+<h2 id="第四题-高僧斗法-1"><a href="#第四题-高僧斗法-1" class="headerlink" title="第四题 高僧斗法"></a><strong>第四题 高僧斗法</strong></h2><h3 id="分析-3"><a href="#分析-3" class="headerlink" title="分析"></a>分析</h3><p>这题是Nim博弈的变形。</p>
+<blockquote>
+<p>Nim游戏是组合游戏(Combinatorial Games)的一种，准确来说，属于“Impartial Combinatorial Games”（以下简称ICG）。满足以下条件的游戏是ICG（可能不太严谨）：1、有两名选手；2、两名选手交替对游戏进行移动(move)，每次一步，选手可以在（一般而言）有限的合法移动集合中任选一种进行移动；3、对于游戏的任何一种可能的局面，合法的移动集合只取决于这个局面本身，不取决于轮到哪名选手操作、以前的任何操作、骰子的点数或者其它什么因素； 4、如果轮到某名选手移动，且这个局面的合法的移动集合为空（也就是说此时无法进行移动），则这名选手负。</p>
+</blockquote>
+<pre><code>Nim取子游戏是由两个人面对若干堆硬币（或石子）进行的游戏。设有k&gt;=1堆硬币，各堆分别含有N1，N2，……NK枚硬币。游戏的目的就是选择最后剩下的硬币。游戏法则如下：
+1．两个游戏人交替进行游戏（游戏人I和游戏人II）；
+2．当轮到每个游戏人取子时，选择这些堆中的一堆，并从所选的堆中取走至少一枚硬币（游戏人可以取走他所选堆中的全部硬币）；
+3．当所有的堆都变成空堆时，最后取子的游戏人即为胜者。
+这个游戏中的变量是堆数k和各堆的硬币数N1，N2，……Nk。对应的组合问题是，确定游戏人I获胜还是游戏人II获胜以及两个游戏人应该如何取子才能保证自己获胜（获胜策略）。
+</code></pre><p>游戏可以提取变量抽象成以上游戏模型，则可以直接使用结论</p>
+<blockquote>
+<p>所有变量异或结果不为零，则能保证先手胜。操作技巧是设法从N-position(异或结果不为零)移动到P-position(异或结果为零)</p>
+</blockquote>
+<p>此题就利用了这结论，变量是$d[0], d[2],…d[2k]$</p>
+<h3 id="答案-3"><a href="#答案-3" class="headerlink" title="答案"></a>答案</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXN	101</span></span><br><span class="line"><span class="keyword">int</span> a[MAXN], d[MAXN];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>, n, yh, j, k;</span><br><span class="line">	<span class="keyword">char</span> c;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%c"</span>, &amp;a[i], &amp;c);</span><br><span class="line">	i++;</span><br><span class="line">	<span class="keyword">while</span>(c != <span class="string">'\n'</span>)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%c"</span>, &amp;a[i], &amp;c);</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">	n = i;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++)</span><br><span class="line">		d[i] = a[i + <span class="number">1</span>] - a[i] - <span class="number">1</span>;</span><br><span class="line">	d[i] = <span class="number">0</span>;</span><br><span class="line">	yh = d[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">2</span>; i &lt; n; i += <span class="number">2</span>)</span><br><span class="line">		yh ^= d[i];</span><br><span class="line">	<span class="keyword">if</span>(yh == <span class="number">0</span>)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"-1\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j = <span class="number">1</span>; j &lt;= d[i]; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			d[i] -= j;</span><br><span class="line">			<span class="keyword">if</span>(i &gt; <span class="number">0</span>)</span><br><span class="line">				d[i - <span class="number">1</span>] += j;</span><br><span class="line">			yh = d[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">for</span>(k = <span class="number">2</span>; k &lt; n; k += <span class="number">2</span>)</span><br><span class="line">				yh ^= d[k];</span><br><span class="line">			<span class="keyword">if</span>(yh == <span class="number">0</span>)&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, a[i], a[i] + j);</span><br><span class="line">				<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			d[i] += j;</span><br><span class="line">			<span class="keyword">if</span>(i &gt; <span class="number">0</span>)</span><br><span class="line">				d[i - <span class="number">1</span>] -= j;			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第五题-格子刷油漆-1"><a href="#第五题-格子刷油漆-1" class="headerlink" title="第五题 格子刷油漆"></a><strong>第五题 格子刷油漆</strong></h2><h3 id="分析-4"><a href="#分析-4" class="headerlink" title="分析"></a>分析</h3><p>先定义几个概念，便于分析：<br><em>相对格子：</em> 对于某个格子，同一列的另一个格子<br><em>走法B：</em> 从四个角的某一个角起，遍历所有的格子后回到相对格子。这就要求往返的“往”过程中每列只能选择其中的一个刷，因此n列格子按此方法有$2^{n-1}$种走法。<br><em>走法A：</em> 从四个角的某一个角起，遍历所有的格子，不一定回到相对格子，这里可分为三种基本情况：<br>①对于一些列，一列一列地走，每列有两种走法，比如前k列按①走而剩下的n-k列按A走，则走法数为$2^{k}a<em>{n-k}$<br>②对于一些列，两列两列地走，那么就要求两列中的起点必须在前一列，终点必须在后一列，这样才可以走后面的n-2列。在这两列中，起点有两个选择，对于某个起点，又有两种走法。因此，前两列按②走，后n-2列按A走，有$4a</em>{n-2}$种走法。<br>③按B走。<br>综上，n列按走法A的情况有：$a<em>n=2a</em>{n-1}+4a_{n-2}+b_n$</p>
+<p>我们再来按开始位置分情况讨论，对于四个角中的每一个角，走法数必定为$a_n$<br>对于其它的某一列$i(2&lt;=i&lt;=n-1)$，必定是从i这一列开始任意遍历一边，回到相对格子，再按A走法走完另一边（AB的开始位置各有两种选择，且开始列必须由走法B走），得走法：<br>$$4b<em>ia</em>{n-i}+4b<em>{n-i+1}a</em>{i-1}$$<br>再考虑各列作为起点，用sum累加得结果。</p>
+<h3 id="答案-4"><a href="#答案-4" class="headerlink" title="答案"></a>答案</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MOD	1000000007</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX	1003</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> a[MAX], b[MAX], sum;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n, i;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	b[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">2</span>; i &lt;= n; i++)</span><br><span class="line">		b[i] = (b[i - <span class="number">1</span>] * <span class="number">2</span>) % MOD;</span><br><span class="line">	a[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">	a[<span class="number">2</span>] = <span class="number">6</span>;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">3</span>; i &lt;= n; i++)</span><br><span class="line">		a[i] = ((<span class="number">2</span> * a[i - <span class="number">1</span>]) % MOD + (<span class="number">4</span> * a[i - <span class="number">2</span>]) % MOD + b[i]) % MOD;</span><br><span class="line">	sum = <span class="number">4</span> * a[n];</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">2</span>; i &lt; n; i++)&#123;</span><br><span class="line">		sum += ((<span class="number">4</span>*b[i]*a[n - i])%MOD + (<span class="number">4</span>*b[n-i+<span class="number">1</span>]*a[i<span class="number">-1</span>])%MOD)%MOD;</span><br><span class="line">		sum %= MOD;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, sum);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第六题-农场阳光-1"><a href="#第六题-农场阳光-1" class="headerlink" title="第六题 农场阳光"></a><strong>第六题 农场阳光</strong></h2><h3 id="分析-5"><a href="#分析-5" class="headerlink" title="分析"></a>分析</h3><p>先把所有变长放大一百倍再计算。利用圆心与各点距离，统计未被遮光的点数，从而求出比例，再乘农场面积。</p>
+<h3 id="答案-5"><a href="#答案-5" class="headerlink" title="答案"></a>答案</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ZOOM	100</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PI	3.1415926</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> false	0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> true	1</span></span><br><span class="line"><span class="keyword">int</span> n, _a, _b, a, b;</span><br><span class="line"><span class="keyword">double</span> g;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span>&#123;</span><br><span class="line">	<span class="keyword">double</span> x, y, z, r;</span><br><span class="line">&#125;zhuwei;</span><br><span class="line">zhuwei zw[<span class="number">101</span>];</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">dis</span><span class="params">(<span class="keyword">double</span> x1, <span class="keyword">double</span> y1, <span class="keyword">double</span> x2, <span class="keyword">double</span> y2)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">sqrt</span>((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, k, flag, sum = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%lf%d"</span>, &amp;_a, &amp;_b, &amp;g, &amp;n);</span><br><span class="line">	a = _a * ZOOM;</span><br><span class="line">	b = _b * ZOOM;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%lf%lf%lf%lf"</span>, &amp;zw[i].x, &amp;zw[i].y, &amp;zw[i].z, &amp;zw[i].r);</span><br><span class="line">		zw[i].y *= ZOOM;</span><br><span class="line">		zw[i].r *= ZOOM;</span><br><span class="line">		<span class="keyword">if</span>(g == <span class="number">90.0</span>)</span><br><span class="line">			zw[i].x *= ZOOM;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			zw[i].x = ((<span class="keyword">double</span>)zw[i].x + zw[i].z / <span class="built_in">tan</span>(g/<span class="number">180.0</span>*PI)) * ZOOM;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= a; i++)</span><br><span class="line">		<span class="keyword">for</span>(j = <span class="number">1</span>; j &lt;= b; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			flag = <span class="literal">true</span>;</span><br><span class="line">			<span class="keyword">for</span>(k = <span class="number">0</span>; k &lt; n; k++)</span><br><span class="line">				<span class="keyword">if</span>(dis(zw[k].x, zw[k].y, i, j) &lt; zw[k].r)</span><br><span class="line">					flag = <span class="literal">false</span>;</span><br><span class="line">			<span class="keyword">if</span>(flag)</span><br><span class="line">				sum++;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.2lf\n"</span>, sum/(<span class="keyword">double</span>)(a * b) * _a * _b);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -360,7 +408,7 @@
           
             <a href="/tags/蓝桥杯/" rel="tag">#蓝桥杯</a>
           
-            <a href="/tags/第四届蓝桥杯/" rel="tag">#第四届蓝桥杯</a>
+            <a href="/tags/Nim博弈/" rel="tag">#Nim博弈</a>
           
         </div>
       
@@ -369,13 +417,17 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/格子刷油漆/" rel="next" title="格子刷油漆">
-                <i class="fa fa-chevron-left"></i> 格子刷油漆
+              <a href="/2016/05/第三届蓝桥杯题解/" rel="next" title="第三届蓝桥杯C/C++ B组决赛题解">
+                <i class="fa fa-chevron-left"></i> 第三届蓝桥杯C/C++ B组决赛题解
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/第五届蓝桥杯题解/" rel="prev" title="第五届蓝桥杯C/C++ B组决赛题解">
+                第五届蓝桥杯C/C++ B组决赛题解 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -391,7 +443,7 @@
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2016/06/第四届蓝桥杯题解/"
-     data-title="第四届蓝桥杯题解"
+     data-title="第四届蓝桥杯C/C++ B组决赛题解"
      data-content=""
      data-url="http://yoursite.com/2016/06/第四届蓝桥杯题解/">
   <div class="ds-share-inline">
@@ -421,7 +473,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/06/第四届蓝桥杯题解/"
-           data-title="第四届蓝桥杯题解" data-url="http://yoursite.com/2016/06/第四届蓝桥杯题解/">
+           data-title="第四届蓝桥杯C/C++ B组决赛题解" data-url="http://yoursite.com/2016/06/第四届蓝桥杯题解/">
       </div>
     
   </div>
@@ -466,7 +518,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -483,7 +535,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -565,7 +617,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#试题"><span class="nav-number">1.</span> <span class="nav-text">试题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一题-猜灯谜"><span class="nav-number">1.1.</span> <span class="nav-text">第一题 猜灯谜</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二题-连续奇数和"><span class="nav-number">1.2.</span> <span class="nav-text">第二题 连续奇数和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三题-空白格式化"><span class="nav-number">1.3.</span> <span class="nav-text">第三题 空白格式化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四题-高僧斗法"><span class="nav-number">1.4.</span> <span class="nav-text">第四题 高僧斗法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五题-格子刷油漆"><span class="nav-number">1.5.</span> <span class="nav-text">第五题 格子刷油漆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六题-农场阳光"><span class="nav-number">1.6.</span> <span class="nav-text">第六题 农场阳光</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#答案及分析"><span class="nav-number">2.</span> <span class="nav-text">答案及分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一题-猜灯谜-1"><span class="nav-number">2.1.</span> <span class="nav-text">第一题 猜灯谜</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析"><span class="nav-number">2.1.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#答案"><span class="nav-number">2.1.2.</span> <span class="nav-text">答案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二题-连续奇数和-1"><span class="nav-number">2.2.</span> <span class="nav-text">第二题 连续奇数和</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#答案-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">答案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三题-空白格式化-1"><span class="nav-number">2.3.</span> <span class="nav-text">第三题 空白格式化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#答案-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">答案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四题-高僧斗法-1"><span class="nav-number">2.4.</span> <span class="nav-text">第四题 高僧斗法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析-3"><span class="nav-number">2.4.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#答案-3"><span class="nav-number">2.4.2.</span> <span class="nav-text">答案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五题-格子刷油漆-1"><span class="nav-number">2.5.</span> <span class="nav-text">第五题 格子刷油漆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析-4"><span class="nav-number">2.5.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#答案-4"><span class="nav-number">2.5.2.</span> <span class="nav-text">答案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六题-农场阳光-1"><span class="nav-number">2.6.</span> <span class="nav-text">第六题 农场阳光</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析-5"><span class="nav-number">2.6.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#答案-5"><span class="nav-number">2.6.2.</span> <span class="nav-text">答案</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
