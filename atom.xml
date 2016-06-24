@@ -437,11 +437,11 @@ pop(pst, buf, c, w)&lt;/code&gt;&lt;/p&gt;
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数独" scheme="http://yoursite.com/tags/%E6%95%B0%E7%8B%AC/"/>
     
       <category term="回溯" scheme="http://yoursite.com/tags/%E5%9B%9E%E6%BA%AF/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -589,9 +589,9 @@ pop(pst, buf, c, w)&lt;/code&gt;&lt;/p&gt;
     <link href="http://yoursite.com/2016/05/%E6%95%B0%E7%9A%84%E5%88%92%E5%88%86/"/>
     <id>http://yoursite.com/2016/05/数的划分/</id>
     <published>2016-05-18T09:30:46.000Z</published>
-    <updated>2016-05-18T10:42:47.951Z</updated>
+    <updated>2016-06-24T14:24:20.534Z</updated>
     
-    <content type="html">&lt;p&gt;典型的放球问题的一个子问题&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;典型的&lt;a href=&quot;http://liangjunqiang.top/2016/05/%E6%94%BE%E7%90%83%E9%97%AE%E9%A2%98%EF%BC%88%E7%90%83%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%89/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;放球问题&lt;/a&gt;的一个子问题&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;将整数n分成k份，且每份不能为空，任意两份不能相同(不考虑顺序)。&lt;br&gt;　　例如：n=7，k=3，下面三种分法被认为是相同的。&lt;br&gt;　　$1，1，5; 1，5，1; 5，1，1;$&lt;br&gt;　　问有多少种不同的分法。&lt;br&gt;输入格式&lt;br&gt;　　n，k&lt;br&gt;输出格式&lt;br&gt;　　一个整数，即不同的分法&lt;br&gt;样例输入&lt;br&gt;7 3&lt;br&gt;样例输出&lt;br&gt;4 {四种分法为：$1，1，5; 1，2，4; 1，3，3; 2，2，3;$}&lt;br&gt;数据规模和约定&lt;br&gt;　　$6&amp;lt;n&amp;lt;=200，2&amp;lt;=k&amp;lt;=6$&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -600,14 +600,14 @@ pop(pst, buf, c, w)&lt;/code&gt;&lt;/p&gt;
     
     <summary type="html">
     
-      &lt;p&gt;典型的放球问题的一个子问题&lt;br&gt;
+      &lt;p&gt;典型的&lt;a href=&quot;http://liangjunqiang.top/2016/05/%E6%94%BE%E7%90%83%E9%97%AE%E9%A2%98%EF%BC%88%E7%90%83%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%89/&quot;&gt;放球问题&lt;/a&gt;的一个子问题&lt;br&gt;
     
     </summary>
     
     
-      <category term="蓝桥杯" scheme="http://yoursite.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
-    
       <category term="动态规划" scheme="http://yoursite.com/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+      <category term="蓝桥杯" scheme="http://yoursite.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
     
   </entry>
   
