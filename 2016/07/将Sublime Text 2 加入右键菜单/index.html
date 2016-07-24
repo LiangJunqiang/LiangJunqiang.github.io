@@ -38,7 +38,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="动态规划,蓝桥杯," />
+  <meta name="keywords" content="Sublime Text,右键菜单," />
 
 
 
@@ -56,16 +56,30 @@
 
 
 
-<meta name="description" content="典型的放球问题的一个子问题">
+<meta name="description" content="按照vim加入鼠标右键的方法.果然可以.这里和大家分享
+
+运行中输入 regedit 打开注册表
+
+在HKEY_CLASSES_ROOT/*/shell/ 下新建’项’ ,名称自己觉得.我用的是Sublime Text 2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数的划分">
-<meta property="og:url" content="http://yoursite.com/2016/05/数的划分/index.html">
+<meta property="og:title" content="将Sublime Text 2 加入右键菜单">
+<meta property="og:url" content="http://yoursite.com/2016/07/将Sublime Text 2 加入右键菜单/index.html">
 <meta property="og:site_name" content="LiangJun's Notes">
-<meta property="og:description" content="典型的放球问题的一个子问题">
-<meta property="og:updated_time" content="2016-06-24T14:24:22.000Z">
+<meta property="og:description" content="按照vim加入鼠标右键的方法.果然可以.这里和大家分享
+
+运行中输入 regedit 打开注册表
+
+在HKEY_CLASSES_ROOT/*/shell/ 下新建’项’ ,名称自己觉得.我用的是Sublime Text 2">
+<meta property="og:image" content="http://7xssq8.com1.z0.glb.clouddn.com/sublime%20text2%20right.png">
+<meta property="og:updated_time" content="2016-07-24T09:15:13.669Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数的划分">
-<meta name="twitter:description" content="典型的放球问题的一个子问题">
+<meta name="twitter:title" content="将Sublime Text 2 加入右键菜单">
+<meta name="twitter:description" content="按照vim加入鼠标右键的方法.果然可以.这里和大家分享
+
+运行中输入 regedit 打开注册表
+
+在HKEY_CLASSES_ROOT/*/shell/ 下新建’项’ ,名称自己觉得.我用的是Sublime Text 2">
+<meta name="twitter:image" content="http://7xssq8.com1.z0.glb.clouddn.com/sublime%20text2%20right.png">
 
 
 
@@ -83,7 +97,7 @@
   };
 </script>
 
-  <title> 数的划分 | LiangJun's Notes </title>
+  <title> 将Sublime Text 2 加入右键菜单 | LiangJun's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -232,7 +246,7 @@
             
             
               
-                数的划分
+                将Sublime Text 2 加入右键菜单
               
             
           </h1>
@@ -244,8 +258,8 @@
               <i class="fa fa-calendar"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-18T17:30:46+08:00" content="2016-05-18">
-              2016-05-18
+            <time itemprop="dateCreated" datetime="2016-07-24T16:27:30+08:00" content="2016-07-24">
+              2016-07-24
             </time>
           </span>
 
@@ -258,8 +272,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/05/数的划分/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/数的划分/" itemprop="commentsCount"></span>
+                <a href="/2016/07/将Sublime Text 2 加入右键菜单/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/将Sublime Text 2 加入右键菜单/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -282,12 +296,30 @@
       
 
       
-        <p>典型的<a href="http://liangjunqiang.top/2016/05/%E6%94%BE%E7%90%83%E9%97%AE%E9%A2%98%EF%BC%88%E7%90%83%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%89/" target="_blank" rel="external">放球问题</a>的一个子问题<br><a id="more"></a></p>
-<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><blockquote>
-<p>将整数n分成k份，且每份不能为空，任意两份不能相同(不考虑顺序)。<br>　　例如：n=7，k=3，下面三种分法被认为是相同的。<br>　　$1，1，5; 1，5，1; 5，1，1;$<br>　　问有多少种不同的分法。<br>输入格式<br>　　n，k<br>输出格式<br>　　一个整数，即不同的分法<br>样例输入<br>7 3<br>样例输出<br>4 {四种分法为：$1，1，5; 1，2，4; 1，3，3; 2，2，3;$}<br>数据规模和约定<br>　　$6&lt;n&lt;=200，2&lt;=k&lt;=6$</p>
-</blockquote>
-<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>这里需要引入与第二类斯特林(Stirling) 数 $S (n,m)$ 类似的<a href="http://166.111.121.20:9080/mathjournal/XUSJ200202/xusj200202010.caj.pdf" target="_blank" rel="external">分组数$M(n,r)$</a>来简化。</p>
-<h1 id="C代码"><a href="#C代码" class="headerlink" title="C代码"></a>C代码</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="function">LL <span class="title">M</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> r)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(r == <span class="number">1</span> || n == r || n == r + <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(n &lt; r)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(r == <span class="number">2</span>)</span><br><span class="line">		<span class="keyword">return</span> n/<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> (M(n - r, r) + M(n - <span class="number">1</span>, r - <span class="number">1</span>));</span><br><span class="line">&#125; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m, n;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, M(n, m));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>按照vim加入鼠标右键的方法.果然可以.这里和大家分享</p>
+<ol>
+<li><p>运行中输入 regedit 打开注册表</p>
+</li>
+<li><p>在HKEY_CLASSES_ROOT/*/shell/ 下新建’项’ ,名称自己觉得.我用的是Sublime Text 2</p>
+</li>
+</ol>
+<a id="more"></a>
+<ol>
+<li><p>在 Sublime Text 2下 新建’项’ 名字:command (这个貌似不可以修改)</p>
+</li>
+<li><p>点击  command ,在右边的(默认),双击填入下面的值: </p>
+<pre><code>      E:\cpt_study\Sublime Text 2\sublime_text.exe %1
+
+前面是exe的绝对物理地址,        %1 用tab方式打开不同的文档(必须)
+</code></pre></li>
+</ol>
+<p><img src="http://7xssq8.com1.z0.glb.clouddn.com/sublime%20text2%20right.png" alt=""></p>
+<ol>
+<li><p>在Sublime Text下新建字符串值命名为Icon，值为 “Sublime text 2所在路径,0″，我这里就是 E:\cpt_study\Sublime Text 2\sublime_text.exe,0</p>
+<p>保存,看看右键.是不是ok了.</p>
+</li>
+</ol>
+
       
     </div>
     
@@ -328,9 +360,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/动态规划/" rel="tag">#动态规划</a>
+            <a href="/tags/Sublime-Text/" rel="tag">#Sublime Text</a>
           
-            <a href="/tags/蓝桥杯/" rel="tag">#蓝桥杯</a>
+            <a href="/tags/右键菜单/" rel="tag">#右键菜单</a>
           
         </div>
       
@@ -339,17 +371,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/如何使用Markdown写数学公式/" rel="next" title="如何使用Markdown写数学公式">
-                <i class="fa fa-chevron-left"></i> 如何使用Markdown写数学公式
+              <a href="/2016/06/第六届蓝桥杯题解/" rel="next" title="第六届蓝桥杯C/C++ B组决赛题解">
+                <i class="fa fa-chevron-left"></i> 第六届蓝桥杯C/C++ B组决赛题解
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/放球问题（球盒模型）/" rel="prev" title="放球问题（球盒模型）">
-                放球问题（球盒模型） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -364,10 +392,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/05/数的划分/"
-     data-title="数的划分"
+        <div class="ds-share flat" data-thread-key="2016/07/将Sublime Text 2 加入右键菜单/"
+     data-title="将Sublime Text 2 加入右键菜单"
      data-content=""
-     data-url="http://yoursite.com/2016/05/数的划分/">
+     data-url="http://yoursite.com/2016/07/将Sublime Text 2 加入右键菜单/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -394,8 +422,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/数的划分/"
-           data-title="数的划分" data-url="http://yoursite.com/2016/05/数的划分/">
+      <div class="ds-thread" data-thread-key="2016/07/将Sublime Text 2 加入右键菜单/"
+           data-title="将Sublime Text 2 加入右键菜单" data-url="http://yoursite.com/2016/07/将Sublime Text 2 加入右键菜单/">
       </div>
     
   </div>
@@ -539,7 +567,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C代码"><span class="nav-number">3.</span> <span class="nav-text">C代码</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
