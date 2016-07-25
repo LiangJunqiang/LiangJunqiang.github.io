@@ -62,7 +62,7 @@
     <link href="http://yoursite.com/2016/07/%E5%B0%86Sublime%20Text%202%20%E5%8A%A0%E5%85%A5%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/"/>
     <id>http://yoursite.com/2016/07/将Sublime Text 2 加入右键菜单/</id>
     <published>2016-07-24T08:27:30.000Z</published>
-    <updated>2016-07-24T09:15:13.669Z</updated>
+    <updated>2016-07-25T12:43:52.853Z</updated>
     
     <content type="html">&lt;p&gt;按照vim加入鼠标右键的方法.果然可以.这里和大家分享&lt;/p&gt;
 &lt;ol&gt;
@@ -87,6 +87,9 @@
 &lt;p&gt;保存,看看右键.是不是ok了.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此方法的缺点是：如果右键打开一个文件名含空格的文件时，将出现错误。如有更好方法请留言指教，谢谢！&lt;/p&gt;
+&lt;/blockquote&gt;
 </content>
     
     <summary type="html">
@@ -530,9 +533,9 @@ pop(pst, buf, c, w)&lt;/code&gt;&lt;/p&gt;
     </summary>
     
     
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数独" scheme="http://yoursite.com/tags/%E6%95%B0%E7%8B%AC/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="回溯" scheme="http://yoursite.com/tags/%E5%9B%9E%E6%BA%AF/"/>
     
